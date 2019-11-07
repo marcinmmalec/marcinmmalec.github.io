@@ -1,0 +1,317 @@
+<!-- 
+ICT 580-026: Term Project Option 3: Course Timeline
+Author: Marcin M. Malec
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Page Title -->
+        <title>ICT 580-026 Term Project</title>
+        <!-- Character Encoding UTF-8 && IOS-8859-1 -->
+        <meta charset="UTF-8">
+        <!-- Add Author -->
+        <meta name="author" content="Marcin M. Malec">
+        <!-- Stylesheet -->
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <!-- Code to establish the @media in CSS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <!-- Content Section -->
+    <body>
+        <!-- Header Section -->
+        <header>
+            <!-- Navigation List -->
+            <fieldset id="nav_bar">
+                <legend>Navigation Menu</legend>
+                <nav>
+                    <ul>
+                        <li><a href="#timeline_1">Main HTML Tags</a></li>
+                        <li><a href="#timeline_2">Images</a></li>
+                        <li><a href="#timeline_3">Style List</a></li>
+                        <li><a href="#timeline_4">Tables</a></li>
+                        <li><a href="#timeline_5">Text Formatting</a></li>
+                        <li><a href="#timeline_6">Video</a></li>
+                        <li><a href="#timeline_7">Forms</a></li>
+                        <li><a href="#timeline_8">Audio</a></li>
+                        <li><a href="#timeline_9">Box Model</a></li>
+                        <li><a href="#timeline_10">CSS Units</a></li>
+                    </ul>
+                </nav>
+            </fieldset>
+        </header>
+        <!-- Middle Section -->
+        <main>
+            <!-- Timeline Section -->
+            <div class="timeline">
+                <!-- Define Left side Content -->
+                <div class="container left_side">
+                    <!-- Define actual content -->
+                    <div class="content" id="timeline_1">
+                        <!-- Main HTML Tags -->
+                        <h2>Main HTML Tags</h2>
+                        <div>&lt;!DOCTYPE HTML&gt;</div>
+                        <div>&lt;head&gt;</div>
+                        <div class="indent">...</div>
+                        <div>&lt;&#47;head&gt;</div>
+                        <div>&lt;body&gt;</div>
+                        <div class="indent">...</div>
+                        <div>&lt;&#47;body&gt;</div>
+                    </div>
+                </div>
+                <!-- Define Right side Content -->
+                <div class="container right_side">
+                    <!-- Define actual content -->
+                    <div class="content" id="timeline_2">
+                        <!-- Images -->
+                        <h2>Images</h2>
+                        <article>
+                            <h4>HTML:</h4>
+                            <div>&lt;img src&#61;&quot;images/maxresdefault.jpg&quot;&gt;</div>
+                            <h4>Result:</h4>
+                            <div><img src="images/maxresdefault.jpg" alt="Sample Image"></div>
+                        </article>
+                    </div>
+                </div>
+                <!-- Define Left side Content -->
+                <div class="container left_side">
+                    <!-- Define actual content -->
+                    <div class="content" id="timeline_3">
+                        <!-- Style List -->
+                        <h2>Style List</h2>
+                        <h4>HTML:</h4>
+                        <div>&lt;ol id="oList"&gt;</div>
+                        <div class="indent">&lt;li&gt;Item 1&lt;li&gt;</div>
+                        <div class="indent">&lt;li&gt;Item 2&lt;li&gt;</div>
+                        <div class="indent">&lt;li&gt;Item 3&lt;li&gt;</div>
+                        <div>&lt;ol&gt;</div>
+                        <div>&lt;ul id="uList"&gt;</div>
+                        <div class="indent">&lt;li&gt;Item 1&lt;li&gt;</div>
+                        <div class="indent">&lt;li&gt;Item 2&lt;li&gt;</div>
+                        <div class="indent">&lt;li&gt;Item 3&lt;li&gt;</div>
+                        <div>&lt;ul&gt;</div>
+                        <h4>Result:</h4>
+                        <ol id="oList">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ol>
+                        <ul id="uList">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Define Right side Content -->
+                <div class="container right_side">
+                    <!-- Define actual content -->
+                    <div class="content" id="timeline_4">
+                        <!-- Tables -->
+                        <h2>Tables</h2>
+                        <h4>HTML:</h4>
+                        <div>&lt;table&gt;</div>
+                        <div class="indent">&lt;tr&gt;</div>
+                        <div class="dindent">&lt;th&gt;Column 1&lt;/th&gt;</div>
+                        <div class="dindent">&lt;th&gt;Column 2&lt;/th&gt;</div>
+                        <div class="indent">&lt;/tr&gt;</div>
+                        <div class="indent">&lt;tr&gt;</div>
+                        <div class="dindent">&lt;td&gt;1&lt;/td&gt;</div>
+                        <div class="dindent">&lt;td&gt;2&lt;/td&gt;</div>
+                        <div class="indent">&lt;/tr&gt;</div>
+                        <div class="indent">&lt;tr&gt;</div>
+                        <div class="dindent">&lt;td&gt;3&lt;/td&gt;</div>
+                        <div class="dindent">&lt;td&gt;4&lt;/td&gt;</div>
+                        <div class="indent">&lt;/tr&gt;</div>
+                        <div>&lt;/table&gt;</div>
+                        <h4>CSS:</h4>
+                        <div>table, th, td{</div>
+                        <div class="indent">border: 1px solid black;</div>
+                        <div class="indent">border-collapse: collapse;</div>
+                        <div class="indent">text-align: center;</div>  
+                        <div>}</div>   
+                        <h4>Result:</h4>
+                        <table>
+                            <tr>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- Define Left side Content -->
+                <div class="container left_side">
+                    <!-- Define actual content -->
+                    <div class="content" id="timeline_5">
+                        <!-- Text Formatting -->
+                        <h2>Text Formatting</h2>
+                        <h4>HTML:</h4>
+                        <div>&lt;div id="tnr"&gt;Times New Roman&lt;/div&gt;</div>
+                        <div>&lt;div id="arial"&gt;Arial&lt;/div&gt;</div>
+                        <div>&lt;div id="courier"&gt;Courier New&lt;/div&gt;</div>
+                        <h4>CSS:</h4>
+                        <div>#tnr{</div>
+                        <div class="indent">font-family: "Times New Roman", Times, serif;</div>
+                        <div>}</div>
+                        <div>#arial{</div>
+                        <div class="indent">font-family: Arial, Helvetica, sans-serif;</div>
+                        <div>}</div>
+                        <div>#courier{</div>
+                        <div class="indent">font-family: "Courier New", Courier, monospace;</div>
+                        <div>}</div>
+                        <h4>Result:</h4>
+                        <div id="tnr">Times New Roman</div>
+                        <div id="arial">Arial</div>
+                        <div id="courier">Courier New</div>
+                    </div>
+                </div>
+                <!-- Define Right side Content -->
+                <div class="container right_side">
+                    <!-- Define actual content -->
+                    <div class="content" id="timeline_6">
+                        <!-- Video -->
+                        <h2>Video</h2>
+                        <h4>HTML:</h4>
+                        <div>&lt;video width=&quot;100&#37;&quot; height=&quot;100&#37;&quot; controls&gt;</div>
+                        <div class="indent">&lt;source src=&quot;media/video/Bubbles.mp4&quot; type=&quot;video/mp4&quot;&gt;</div>
+                        <div>&lt;&#47;video&gt;</div>
+                        <h4>Result:</h4>
+                        <div>
+                            <video controls>
+                                <source src="media/video/Bubbles.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <!-- Define Left side Content -->
+                <div class="container left_side">
+                    <!-- Define actual content -->
+                    <div class="content" id="timeline_7">
+                        <!-- Forms -->
+                        <h2>Forms</h2>
+                        <h4>HTML:</h4>
+                        <div>&lt;form&gt;</div>
+                        <div class="indent">&lt;fieldset&gt;</div>
+                        <div class="dindent">&lt;legend&gt;Radio Buttons&lt;/legend&gt;</div>
+                        <div class="dindent">&lt;input type="radio" name="radio" value="Happy" checked&gt;</div>
+                        <div class="dindent">Happy</div>
+                        <div class="dindent">&lt;input type="radio" name="radio" value="Sad"&gt;</div>
+                        <div class="dindent">Sad</div>
+                        <div class="dindent">&lt;input type="radio" name="radio" value="Bored"&gt;</div>
+                        <div class="dindent">Bored</div>
+                        <div class="indent">&lt;/fieldset&gt;</div>
+                        <div class="indent">&lt;fieldset&gt;</div>
+                        <div class="dindent">&lt;legend&gt;Checkboxes&lt;/legend&gt;</div>
+                        <div class="dindent">&lt;input type="checkbox" name="check" value="Happy" checked&gt;</div>
+                        <div class="dindent">Happy</div>
+                        <div class="dindent">&lt;input type="checkbox" name="check" value="Sad"&gt;</div>
+                        <div class="dindent">Sad</div>
+                        <div class="dindent">&lt;input type="checkbox" name="check" value="Bored"&gt;</div>
+                        <div class="dindent">Bored</div>
+                        <div class="indent">&lt;/fieldset&gt;</div>
+                        <div>&lt;/form&gt;</div>
+                        <h4>Result:</h4>
+                        <form>
+                            <fieldset>
+                                <legend>Radio Buttons</legend>
+                                <input type="radio" name="radio" value="Happy" checked>
+                                Happy
+                                <input type="radio" name="radio" value="Sad">
+                                Sad
+                                <input type="radio" name="radio" value="bored">
+                                Bored
+                            </fieldset>
+                            <fieldset>
+                                <legend>Checkboxes</legend>
+                                <input type="checkbox" name="check" value="Happy" checked>
+                                Happy
+                                <input type="checkbox" name="check" value="Sad">
+                                Sad
+                                <input type="checkbox" name="check" value="bored">
+                                Bored
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <!-- Define Right side Content -->
+                <div class="container right_side">
+                    <!-- Define actual content -->
+                    <div class="content" id="timeline_8">
+                        <!-- Audio -->
+                        <h2>Audio</h2>
+                        <h4>HTML:</h4>
+                        <div>&lt;audio controls&gt;</div>
+                        <div class="indent">&lt;source src=&quot;media/audio/bensound-happyrock.mp3&quot; type=&quot;audio/mpeg&quot;&gt;</div>
+                        <div>&lt;&#47;audio&gt;</div>
+                        <h4>Result:</h4>
+                        <div>
+                            <audio controls>
+                                <source src="media/audio/bensound-happyrock.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <br>
+                            Music:
+                            <a href="https://www.bensound.com">https://www.bensound.com</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Define Left side Content -->
+                <div class="container left_side">
+                    <!-- Define actual content -->
+                    <div class="content" id="timeline_9">
+                        <!-- Box Model -->
+                        <h2>Box Model</h2>
+                        <div id="box_model">Content</div>
+                    </div>
+                </div>
+                <!-- Define Right side Content -->
+                <div class="container right_side">
+                    <!-- Define actual content -->
+                    <div class="content" id="timeline_10">
+                        <!-- CSS Units -->
+                        <h2>CSS Units</h2>
+                        <h4>CSS:</h4>
+                        <div>#px{</div>
+                        <div class="indent">position: relative;</div>
+                        <div class="indent">left:20px;</div>
+                        <div>}</div>
+                        <div>#em{</div>
+                        <div class="indent">position: relative;</div>
+                        <div class="indent">left:1.2em;</div>
+                        <div>}</div>
+                        <div>#percent{</div>
+                        <div class="indent">position: relative;</div>
+                        <div class="indent">left: 6.4%;</div>
+                        <div>}</div>
+                        <h4>Result:</h4>
+                        <div id="px">Right by 20 Pixels</div>
+                        <div id="em">Right by 1.2x the font</div>
+                        <div id="percent">Right by 6.4%</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer Section -->
+        <footer>
+            <p id="css_logo">
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+            </p>
+            <!-- Extra Information -->
+            <p>For more information on HTML and CSS please visit <a href=https://www.w3schools.com>w3shools.com</a></p>
+        </footer>
+    </body>
+    
+</html>

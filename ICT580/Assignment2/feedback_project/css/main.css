@@ -1,0 +1,238 @@
+/*
+Assignment 2: Create a form with table layout
+ICT580-26
+Author: Marcin M. Malec
+Note: The code violates the top-down concept
+*/
+
+/* Style header section's background color and apply shadowing to create card appearance */
+header{
+    background-color: #ffdf6b;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Style "Joan's Tacos" logo */
+.img_logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+/* Style "Thank you for taking the time to fill our feedback" header */
+#feedback_header{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+/* Style and define the main web page */
+body{
+    margin: auto;
+    width: 600px;
+    background-color: #ffdf6b;
+}
+
+/* Style our middle section */
+main{
+    background-color: white;
+    padding-left: 1em;
+    padding-right: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: -15px
+}
+
+/* Style "How much did you spend?" */
+.span_header{
+    font-weight: bold;
+}
+
+/* Style headers used to seperate the form */
+.hr{
+    position: relative;
+    top: 5px;
+    display: block;
+    background-color: #ffdf6b;
+    font-style: italic;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-indent: 0.2em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Style the dropbox */
+#select{
+    margin-left: 3em
+}
+
+/* Style "What was your order?" box */
+/* Adjust it's position */
+#form_field1{
+    margin-top: 2em;
+    margin-right: 2em;
+}
+
+/* Push options down a bit */
+#form_field1 input{
+    margin-top: 1.5em
+}
+
+/* Style "How was your experience?" box */
+/* Adjust it's position */
+#form_field2{
+    margin-top: 3em;
+    margin-right: 2em;
+}
+
+/* Push options down a bit */
+#form_field2 input{
+    margin-top: 1.5em
+}
+
+/* Style "About you" section */
+#about_you{
+    position: relative;
+    top: -15px
+}
+
+/* Style "Send us an image of your visist" section */
+#send_img{
+    position: relative;
+    top: -25px;
+}
+
+/* Define Table */
+.table{
+    display: table;
+}
+
+/* Define table row */
+.row{
+    display: table-row
+}
+
+/* Define table cell */
+.cell{
+    display: table-cell;
+    width: 100%
+}
+
+/* Reduce the size of the first cell in "About your visit" to 75% */
+#cell1{
+    width: 75%;
+}
+
+/* Style header in discount box */
+.aboutvisit_legend{
+    font-weight: bold;
+}
+
+/* Style discount box */
+#discount{
+    width: 25%;
+    background-color: #ffffcc;
+    padding-top: 10px;
+    border-top-color: #ffdf6b;
+    border-top-style: solid;
+    border-top-width: 4px;
+}
+
+/* Style "About you" labels */
+#about_you label{
+    float: left;
+    width: 10em;
+    text-align: right;
+    margin-right: 0em;
+    text-align: left;
+    font-weight: bold;
+    font-size: 13px
+}
+
+/* Style "*" that sit in front of required input */
+#about_you label span{
+    color: red;
+}
+
+/* Style the text fields in "About you" */
+#about_you input{
+    margin-bottom: 0.5em;
+    width: 60%;
+}
+
+/* Style the three phone number fields */
+input#phone1{
+    width: 10%
+}
+
+input#phone2{
+    width: 10%
+}
+
+input#phone3{
+    width: 10%
+}
+
+/* Style the "-"s that reside inbetween the phone boxes */
+.dash{
+    margin-left:-5px;
+    margin-right:-5px;
+}
+
+/* Define what happens when a user selects a textbox*/
+#about_you input:focus{
+    border-color: #0c0;
+    border-style: solid;
+    /* Need to set to 2px to notice the green, otherwise it looks blue-ish */
+    border-width: 2px;
+}
+/* Same as above */
+#about_you textarea:focus{
+    border-color: #0c0;
+    border-style: solid;
+    border-width: 2px;
+}
+
+/* Style textarea for "message" */
+#textarea_style{
+    width: 350px;
+    height: 100px;
+}
+
+/* Style image attachment */
+#attach_img{
+    margin-top: -1.5em;
+    padding-bottom: 4em;
+}
+
+/* Style "Attach only image" */
+#attach_img label{
+    float: left;
+    font-weight: bold
+}
+
+/* Move "choose file" button over to the right */
+#attach_img input{
+    margin-left: 5em;
+}
+
+footer{
+    
+}
+
+/* Style submit button */
+#submit_button{
+    width: 600px;
+    background-color: #2196f3;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-style: none;
+    height: 45px;
+}
+
+/* Define what happens when the user hovers over the submit button */
+#submit_button:hover{
+    background-color: #4CAF50;
+    color: #fff;
+}

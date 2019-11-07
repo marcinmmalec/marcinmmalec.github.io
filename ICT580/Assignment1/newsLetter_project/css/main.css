@@ -1,0 +1,137 @@
+/*
+Assignment 1: Design your First Email Newsletter
+ICT580-26
+Author: Marcin M. Malec
+Notice: Code looks gross, there are definitely better ways to write the code
+*/
+
+/* Had to add this to allow the Nav bar to work */
+.img_logo{
+    
+}
+
+/* Style Navigation Bar in header */
+#nav_list ul{
+    list-style-type:none;
+    border-bottom: 3px black solid;
+    border-top: 3px black solid;
+    /* Crop the border by 200 pixels from the right */
+    margin-right: 200px;
+}
+
+#nav_list ul li{
+    display:inline;
+    margin-right: 10px;
+    font-size: 12px;
+    font-style: bold;
+}
+
+#nav_list ul li a{
+    text-decoration: none;
+    color: #333;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/* Style header itself */
+header {
+    background-color: #FFDF6B;
+    display: block;
+    height: 80px;
+    /* Indent title and nav bar */
+    padding-left: 50px;
+}
+
+/* Center Page */
+body{
+    margin: auto;
+    width: 580px;
+}
+
+/* Style the main body of the document */
+main{
+    overflow: auto;
+    background-color: #ffcc11;
+    font-family: 'Shadows Into Light', cursive;
+    padding-left: 50px;
+}
+
+/* Style the header on the main body */
+main h1{
+    font-size: 50px;
+    height: 120px;
+    margin-top: 0px;
+}
+
+/* Style general information */
+main ul{
+    float:left;
+    list-style-type:none;
+    margin-top: 40px;
+    margin-left: -40px;  
+    margin-bottom: 0%;
+}
+
+main ul li{
+    margin-bottom: -20px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Style plate image */
+.img_plate{
+    width:300px;
+    height:229px;
+    float: right;
+    margin-bottom: 0px;
+}
+
+/* Style Footer */
+footer{
+/*    border: 3px dotted;*/
+    font-family: 'Shadows Into Light', cursive;
+    /* Gain the little white space after the body */
+    margin-top: 5px;
+}
+
+/* Style 50% off coupon */
+.coupon_50_off{
+    /* Found this online that allows creating two background colors */
+    background: linear-gradient(to right, #ffcc11 0%, #ffcc11 50%, #000000 50%, white 50%, white 100%);
+    border: 3px dotted;
+    /* Gain the white space between coupons */
+    margin-bottom: 5px;
+    
+}
+
+/* Style the "valid until" text*/
+.coupon_50_off b{
+    font-size: 10px;
+    /* Jerry rigged method of aligning text */
+    float: right;
+    margin-right: 45%;
+    margin-top: 6%;
+}
+
+/* Style the discount amount */
+.discount_50{
+    font-size: 60px;
+    margin-left: 40px;
+}
+
+/* Do the above with the 75% */
+.coupon_75_off{
+    background: linear-gradient(to right, #ffcc11 0%, #ffcc11 75%, #000000 75%, white 75%, white 100%);
+    border: 3px dotted;
+}
+
+.coupon_75_off b{
+    font-size: 10px;
+    float: right;
+    margin-right: 33%;
+    margin-top: 6%;
+}
+
+.discount_75{
+    font-size: 60px;
+    margin-left: 100px;
+}

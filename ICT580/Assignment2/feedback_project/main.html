@@ -1,0 +1,166 @@
+<!-- 
+Assignment 2: Create a form with table layout
+ICT580-26
+Author: Marcin M. Malec
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Page Title -->
+        <title>Joan's Feedback</title>
+        <!-- Character Encoding UTF-8 && IOS-8859-1 -->
+        <meta charset="UTF-8">
+        <!-- Add Author -->
+        <meta name="author" content="Marcin M. Malec">
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    
+    <body>
+        <!-- Header Section -->
+        <header>
+            <!-- Logo -->
+            <img class="img_logo" src="images/logo.png" alt="logo">
+            <!-- Header -->
+            <h2 id="feedback_header">Thank you for taking the time to fill our feedback</h2>
+        </header>
+        
+        <!-- Middle Section -->
+        <main>
+            <!-- BEGIN FORM TAG -->
+            <form id="my_form" onsubmit="alert('Thanks for your feedback')">
+                <!-- "About your visit" Section -->
+                <div class=hr>
+                    <p>About your visit</p>
+                </div>
+                <!-- BEGIN "About your visit" TABLE -->
+                <div class="table">
+                    <div class="row">
+                        <!-- Row: 1 Cell: 1 -->
+                        <div class="cell" id="cell1">
+                            <div id="about_visit">
+                                <!-- "How much did you spend" Section -->
+                                <!-- Dropbox -->
+                                <span class="span_header">How much did you spend?</span>
+                                <!-- Didn't know what options to use so I just went with arbitrary -->
+                                <select name="spent" id=select>
+                                    <option value="less">&lt;10</option>
+                                    <!-- Option 2: 10-20, is default value -->
+                                    <option value="10-20" selected>10-20</option>
+                                    <option value="21-30">21-30</option>
+                                    <option value="greater">&gt;30</option>
+                                </select>
+                                <!-- "What was your order?" Section -->
+                                <!-- Checkboxes -->
+                                <fieldset id=form_field1>
+                                    <legend class="aboutvisit_legend">What was your order?</legend>
+                                    <!-- Option 1: Taco, is dafault value -->
+                                    <input type="checkbox" name="item1" value="Taco" checked>
+                                        Taco
+                                    <input type="checkbox" name="item2" value="Burritos">
+                                        Burritos
+                                    <input type="checkbox" name="item3" value="Quesadillas">
+                                        Quesadillas
+                                </fieldset>
+                                <!-- "How was your experience?" Section -->
+                                <!-- Radio buttons -->
+                                <fieldset id=form_field2>
+                                    <legend class="aboutvisit_legend">How was your experience?</legend>
+                                    <input type="radio" name="experience_value" value="not_bad">
+                                        Not bad
+                                    <!-- Option 2: Good, is default value -->
+                                    <input type="radio" name="experience_value" value="good" checked>
+                                        Good
+                                    <input type="radio" name="experience_value" value="great_work">
+                                        Great work
+                                </fieldset>
+                            </div>
+                        </div>
+                        <!-- Row: 1 Cell: 2 -->
+                        <!-- Discount side box -->
+                        <div class="cell" id="discount">
+                            <!-- Orange bar that appears over the discount box -->
+                            <span id="bar"></span>
+                            <legend class="aboutvisit_legend">How to get 30&#37; off:</legend>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        </div>
+                    </div>
+                <!-- END "About your visit" TABLE -->
+                </div>
+                <!-- "About you" Section -->
+                <div class=hr id="about_you">
+                    <p>About you</p>
+                </div>
+                <!-- BEGIN "About you" TABLE -->
+                <div class="table">  
+                    <div class="row">
+                        <!-- Row: 1 Cell: 1 -->
+                        <div class="cell">
+                            <div id="about_you">
+                                <!-- Full name text field -->
+                                <label for="fullname" accesskey="F">First, last name<span>&#42;</span></label>
+                                <input type="text" name="fullname" id="fullname" autofocus required 
+                                       pattern="[a-zA-Z0-9]+">
+                                <br>
+                                <!-- Email text field -->
+                                <label for="email" accesskey="E">Email<span>&#42;</span></label>
+                                <input type="email" name="email" id="email" autofocus required
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                       title="email@domain.com">
+                                <br>
+                                <!-- Telephone text field -->
+                                <label for="phone" accesskey="T">Telephone</label>
+                                <!--<input type="text" name="phone" id="phone" autofocus
+                                       pattern="\d{3}[\-]\d{3}[\-]\d{4}" 
+                                       title="###-###-###">
+                                <br>-->
+                                <!-- Areacode field -->
+                                <input type="text" name="areacode" id="phone1" autofocus pattern="\d{3}" maxlength="3">
+                                <!-- These spans are meant to add "-" inbetween textboxes-->
+                                <span class="dash">-</span>
+                                <!-- Next 3 numbers -->
+                                <input type="text" name="phone2" id="phone2" autofocus pattern="\d{3}" maxlength="3">
+                                <span class="dash">-</span>
+                                <!-- Final 4 numbers -->
+                                <input type="text" name="phone3" id="phone3" autofocus pattern="\d{4}" maxlength="4">
+                                <br>
+                                <!-- Zipcode text field -->
+                                <label for="zipcode" accesskey="Z">Zip Code</label>
+                                <input type="text" name="zipcode" id="zipcode" autofocus
+                                       pattern="[A-Za-z]\d[A-Za-z][-]?\d[A-Za-z]\d$"
+                                       title="A#A#A#">
+                                <br>
+                                <!-- Message text field -->
+                                <label for="message" accesskey="M">Message<span>&#42;</span></label>
+                                <textarea id="textarea_style" name="message" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                <!-- END "About you" TABLE -->
+                </div>
+                <!-- "Send us an image of your visit" Section -->
+                <div class=hr id="send_img">
+                    <p>Send us an image of your visit</p>
+                </div>
+                <!-- BEGIN IMAGE TABLE -->
+                <div class="table" id="attach_img">    
+                    <div class="row">
+                        <!-- Row: 1 Cell: 1 -->
+                        <div class="cell">
+                            <!-- Code for choose file box with .png restriction -->
+                            <label for="send_image">Attach only image:</label>
+                            <input type="file" name="fileupload" accept="image/png">
+                        </div>
+                    </div>
+                <!-- END IMAGE TABLE -->
+                </div>
+            <!-- END FORM TAG -->
+            </form>
+        </main>
+        <!-- Footer Section -->
+        <footer>
+            <!-- Submit Button attached to the main form tag located in <main> -->
+            <input id="submit_button" type="submit" value="Submit" style="color: white; font-size: 30px" form="my_form"> 
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+/*
+* Assignment 3 Print CSS
+* Author: Marcin M. Malec
+* NOTE: logo seems to disappear in print
+*/
+
+/* Style for when page is viewed in "print" */
+@media print{ 
+    /* Lost the logo image */
+    #logo{
+        display: inline;
+    }
+    /* Remove navigation bar */
+    nav{
+        display: none;
+    }
+    /* Remove slide image */
+    #slide{
+        display: none;
+    }
+    /* Remove social media links */
+    #social{
+        display: none;
+    }
+    /* Change the "Read More" text color to black */
+    /* Had to find this in the developer tools of chrome */
+    #wrapp_article article summary.readMore{
+        color: black;
+    }
+    /* Change header color black */
+    /* Change header font to "Arial" */
+    #wrapp_article article a{
+        color: black;
+        font-family: "Arial";
+    }
+    /* Change color of article and copyright text to black */
+    /* Change article and copyright font to "Times New Roman" */
+    p{
+        color: black;
+        font-family: "Times New Roman";
+    } 
+}

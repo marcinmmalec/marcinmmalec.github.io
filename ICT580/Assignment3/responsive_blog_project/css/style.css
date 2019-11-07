@@ -1,0 +1,388 @@
+/*
+** ICT 580 - Assignment 3
+** November 12th, 2018
+** Resposive simple blog template
+** This's styel sheet for index.html
+**
+** Author: Marcin M. Malec (Edit of original)
+**
+** NOTE: For context row first columns are displayed as:
+** 1 2
+** 3 4
+**
+** Column first columns:
+** 1 3
+** 2 4
+*/
+body
+{
+   margin:0 auto;
+   padding: 0;
+   color: #333333;
+   font-family: Georgia,"Times New Roman",sans-serif;
+   height: 100%;
+   min-height: 100%;
+}
+
+#page_wrapper
+{
+    background-color:#f5f5f5;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+/*********************************** Start header style */
+#logo /* header: top element */
+{
+   background-image:url('../imgs/logo.png');
+   background-repeat:no-repeat;
+   background-position:50% 100%;
+   height: 112px;
+   width:100%;
+   min-width:112px;
+   text-indent:-10000px; /* the freedom of fixed layout :/ */
+   margin:0;
+    /* 40px/480px x 100 = 8.3333333333333333333333333333333% */
+   padding-top: 40px;
+}
+
+nav
+{
+   width:100%;
+   left: 0px;
+   position: absolute;
+   top: 0px;
+    /* 20px/320px x 100 = 6.25% */
+   height: 20px;
+}
+
+nav ul
+{
+   list-style-type:none;
+   height: 20px;
+   text-align:center;
+   padding:0;
+   margin:0;
+}
+
+nav li
+{
+   display: inline;
+   line-height: 130%;
+    /*0.3em = 4.8px/480px x 100 = 1% */
+   padding:0 1%;
+}
+
+nav li a
+{
+   color: hsl(216, 100%, 50%);
+   text-decoration:none;
+   font-style: italic;
+}
+/* End of header style */
+
+/*********************************** Start content style */
+#slide /* Start top element styel */
+{
+   text-align:center;
+}
+
+#slide img
+{
+   max-width: 400px;
+    /* Resize image */
+    width: 95%;
+    height: 100%;
+}    /* End content's top element styel */
+
+#wrapp_article /* Start article element styel */
+{
+   clear: both;
+   overflow: hidden;
+   width: 100%;
+}
+
+#wrapp_article article
+{
+   margin: 1% auto;
+   padding: 2%;
+   width: 84%;
+}
+
+#wrapp_article article a
+{
+   color: #0066FF;
+   text-decoration: none;
+}
+
+#wrapp_article article img
+{
+   display:block;
+   margin:1% auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#recent article h1
+{
+   line-height: 130%;
+   margin: 1% 0;
+}
+
+#wrapp_article article p
+{
+   font-size: 87.5%;
+   line-height: 145%;
+}
+
+#wrapp_article article summary.readMore
+{
+   color: #999;
+   display:block;
+   margin-top: 1%;
+   margin-bottom: 2%;
+}
+/* End of article element style */
+
+
+/*********************************** Start Social icons style */
+#social
+{
+    /* 250px/480px x 100 = 52.083333333333333333333333333333%*/
+    width: 52.083333333333333333333333333333%;
+   margin: 0 auto;
+}
+
+#social ul
+{
+   list-style-type:none;
+}
+
+#social li
+{
+   margin-bottom:5px;
+    /* 95px/250px x 100 = 38% */
+   width:95px;
+   padding:0;
+   margin:0;
+   float:left;
+}
+
+#social li a
+{
+   display:block;
+    /* 95px/95px */
+   width:100%;
+   height:26px;
+   text-indent:-10000px;
+   background-image:url('../imgs/social.png');
+   background-repeat:no-repeat;
+}
+
+/** CSS/image sprities: we will cover it on week 10  **/
+.facebook {background-position:0 0;}
+.twitter {background-position:-98px 0;}
+.youtube {background-position:-196px 0;}
+.foursquare {background-position:-294px 0;}
+
+/* End of Social icons style */
+
+
+/*********************************** Start footer style */
+footer
+{
+   clear:both;
+   padding-top:2%;
+   text-align:center;
+   color:#aaa;
+   font-style:italic;
+   font-size:90%;
+}
+/* End of footer icons style */
+/*********************************** End of content style */
+
+/* NOTE: I've wrote the code starting with the bottom */
+/* Media and worked my way up */
+/* Expect some copy paste when reading top->down */
+/* Style for Screens that are at least 769px wide */
+@media only screen and (min-width: 769px){
+    body{
+        /* Not sure if this is neccessary, I've added this since the code */
+        /* Is suppose to centre the page */
+        width: 100%;
+        min-width: 770px;
+        margin: auto;
+    }
+    
+    header{
+        /* Height of the entire header is defined by the logo */
+        min-height: 112px;
+    }
+    /* Place logo on the top left */
+    #logo{
+        position: relative;
+        /* Remove padding */
+        padding: 0;
+        /* Remove margins */
+        margin: 0;
+        /* Fix width to what the image is, */
+        /* no need to let it get bigger */
+        width: 112px;
+        display: inline-block;
+    }
+    /* Place navigation bar next to logo */
+    nav{
+        position: absolute;
+        /* Don't overlap the logo */
+        left: 112px;
+        /* Define nav bar width as the page width less the size of the logo */
+        width: calc(100% - 112px);
+    }
+    /* Left align the nav bar as leaving it centered looks wrong */
+    nav ul{
+        text-align: left;
+    }
+    /* Display articles in columns using wraping */
+    /* Went with row first column distribution */
+    #wrapp_article{
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+/*        column-rule-style: solid;*/
+        
+    }
+    /* Define the width that allows the articles to be displayed in 4 columns */
+    #wrapp_article article {
+/*        max-width: calc(.5 * 768px);*/
+        /* Can't be 25% due to padding/margins */
+        width: 20%;
+    }
+    /* Display social media links as a single row */
+    #social{
+        width: 50%;
+        /* Bit of a hack to maintain the row */
+        min-width:444px;
+    }
+}
+/* Style for Screens that are at least 481px wide */
+/* But no larger than 768px */
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    body{
+        /* Not sure if this is neccessary, I've added this since the code */
+        /* Is suppose to centre the page */
+        max-width: 768px;
+        margin: auto;
+    }
+    /* I've done this to avoid overlap of Nav and the 896x445 image */
+    header{
+        /* Height of the entire header is defined by the combined height */
+        /* of each Nav element with the height of the logo being the minimum */
+        height: calc(20px * 6);
+        min-height: 112px;
+    }
+    /* Plave logo on the top left */
+    #logo{
+        position: static;
+        padding: 0;
+        margin: 0;
+        /* 112px/768px x 100 = 14.583333333333333333333333333333% */
+        width: 14.583333333333333333333333333333%;
+        display: inline-block;
+    }
+    /* Create centred vertical nav bar */
+    nav{
+        position: absolute;
+        /* 70% seems to allow the nav bar to stay in the gray area */
+        width: 70%;
+        margin: 0px;
+        top: calc(112/2);
+        /* Keeps nav bar centered */
+        /* Use the segment employed by the logo to indent */
+        left: 14.583333333333333333333333333333%;
+    }
+    
+    nav li{
+        display: block;
+/*        text-align: left;*/
+    }
+    /* Establish 2 column articles */
+    /* Went with row first column distribution */
+    #wrapp_article{
+        /*column-count: 2;
+        column-width: 50%;*/
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;  
+/*        column-rule-style: solid;*/
+    }
+    /* Establish the actual 2 columns width */
+    #wrapp_article article {
+/*        max-width: calc(.5 * 768px);*/
+        /* Can't be 50% due to padding/margins */
+        width: 45%;
+    }
+    /* Display social media links in two rows */
+    #social{
+        width: 50%;
+        /* Prevents the columns from breaking */
+        max-width: calc(.5*480px)
+    }
+    
+    /* Row First design */
+    #social ul{
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 480px;
+    }
+}
+/* Style for Screens that are no larger than 481px wide */
+@media only screen and (max-width: 480px){
+    body{
+        margin: auto;
+        max-width: 480px;
+    }
+    
+    /* Navigation bar achieves result in the code on top */
+    /* Nav bar will overlap the large image if the screen gets too small */
+    nav{
+        display: block;
+    }
+    
+    #slide img{
+        /* Establish white space around the main image */
+        margin-left: 1%;
+        margin-right: 1%
+    }
+    /* Don't hide things if the screen gets small enough */
+    #wrapp_article{
+        overflow: visible;
+    }
+    /* Display social media links as two columns */
+    #social{
+        width: 50%
+    }
+    /* Column First design */
+    #social ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* Height of element * number of elements per column */
+        height: calc(26px * 2);
+        padding-left: 0px;
+    }
+}
+
+
+
+
+
+
+
+
