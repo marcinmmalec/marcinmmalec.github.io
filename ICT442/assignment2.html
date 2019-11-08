@@ -1,0 +1,57 @@
+<!--
+-- ICT 442 Assignment 2: Write a function to return a value
+-- Student: Marcin Mariusz Malec
+-- Program will take the incremental component of assignment 1 and make it a function
+-- All results are printed to the console
+-->
+<html>
+    <head>
+        <title>ICT 442 Assessment 2: Function to Return a value</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="ICT 442 Assignment 2">
+        <meta name="author" content="Marcin M. Malec"> 
+    </head>
+    
+    <body>
+        <!-- Simple text -->
+        <p>Looper program will increment the number <span id="x_value"></span> to <span id="y_value"></span> (or more) by <span id="z_value"></span> each loop. Each iteration of the loop will be printed in the console</p>
+    </body>
+    <!-- Script tag was added after body so the document.getElementById content could work -->
+    <script type="text/javascript">
+        // Initial variable
+        var value_to_be_incremented = 1;
+        // Value of final value
+        var value_to_reach = 50;
+        // Value to increment by
+        var increment_by = 2;
+        // Call incrementer function with x=value_to_be_incremented, y=value_to_reach, and z=increment_by
+        console.log("Final Value: " + incrementer(value_to_be_incremented,value_to_reach,increment_by))
+        // Increment function
+        // Parameters:
+            // x: initial value to be incremented
+            // y: final value to reach
+            // z: value to increment x by
+        // Return a modified x after completion of loop
+        // The function will increment x by z until the value is at or beyond z
+        function incrementer(x,y,z){
+            // While loop where the condition was to run the loop when ever
+            // x was less than y
+            while(x<y){
+                // Print initial message to console
+                console.log("Incrementing " + x + " by " + z + ".");
+                // Increment the variable
+                x=x+z;
+                // Print the incremented result
+                console.log("Result: " + x);
+            }
+            // Print completion message
+            console.log("Loop Complete");
+            return x;
+        }
+        // Just random stuff to print information to the screen outside the console
+        // This content have to be added after the body
+        document.getElementById("x_value").innerHTML = value_to_be_incremented;
+        document.getElementById("y_value").innerHTML = value_to_reach;
+        document.getElementById("z_value").innerHTML = increment_by;
+    </script>
+</html>

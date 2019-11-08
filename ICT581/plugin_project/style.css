@@ -1,0 +1,73 @@
+/* Style body element */
+body {
+  background: #eee;
+  color: #444;
+  font-family: 'Helvetica', arial, sans-serif;
+}
+/* General style input */
+input {
+  border: none;
+  display: block;
+  width: 98.4%;
+  line-height: 1.5;
+  padding: 8px 0 8px 10px;
+  border-bottom: 1px solid #cfcbcc;
+  outline:0;
+}
+/* Style headers */
+h1,h2 {
+  text-align: center;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+
+h2 {
+  color: gray;
+}
+/* Style unorded list */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
+/* Style list if parent is an unorded list */
+ul li {
+  position: relative;
+  color: #899098;
+  font-weight: 400;
+  border-bottom: 1px solid #cfcbcc;
+  line-height: 1.5;
+  padding: 8px 0;
+  border: 1px solid #cfcbcc;
+  background: #fff;
+}
+/* Add check box */
+/* This box was orginially created to be replaced with a check mark */
+/* But now serves as a simple indication for a list */
+ul li:before {
+  content: "\25A1";
+  padding: 10px 10px;
+  font-size: 20px;
+}
+/* Style the close button */
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px 16px 11px 16px;
+  background-color: #f44336;
+  color: white;
+}
+/* Style dialog content box */
+.ui-dialog-content {
+  background-color:white !important;
+}
+/* Style error dialog box content to look more of an error */
+/* Can't figure out how to style the header of the dialog box */
+#dialogError {
+  background-color: rgb(235, 204, 204) !important;
+}
+/* Style edit item form field in modal to stand out better */
+#editItem {
+  background-color: #e9e9e9 !important;
+}

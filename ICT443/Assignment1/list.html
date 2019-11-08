@@ -1,0 +1,75 @@
+<!-----------------------------------------------------------------------------------
+-- Assignment 1: Develop a Dynamic To-Do List
+-- ICT 443 013
+-- Student: Marcin M. Malec
+-- 
+-- As a base the list.html, list.js, and list.css code used in Week 3 was employed
+-- Features:
+-- Add Task Items (Created via form like elements)
+-- 	Task Name
+-- 	Task Description
+--	Task Date
+--	Urgency
+--	Task Category
+--	Task Order
+-- Edit Task Items (Edited via form like elements)
+-- Delete Task Items
+-- Reorder Task Items
+-- Hide/Unhide Task List
+-- Delete Task List
+------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Dynamic To-Do List </title>
+		<!-- Link Style and Javascript Files -->
+		<link rel = "stylesheet" href = "list.css" />
+		<script src = "list.js" defer></script>	
+	</head>
+	
+	<body>
+		<div class="header">
+			<h2>To Do List</h2>
+			<!-- Button to add new items -->
+			<span onclick="document.getElementById('id01').style.display='block'" class="addBtn">Add</span>
+			<!-- Button to hide/shore the task list -->
+			<span onclick="hideList()" id="hideBtn" class="addBtn">Hide</span>
+			<!-- Button to delete the list -->
+			<span onclick="deleteList()" class="addBtn">Delete</span>
+		</div>
+		<!-- Modal to create item -->
+		<div class="modal" id="id01">
+			<div class="container modal-content">
+				<input type="text" id="nameInput" placeholder="Title..." required>
+				<input type="text" id="descriptionInput" placeholder="Description..." required>
+				<input type="text" id="categoryInput" placeholder="Category..." required>
+				<input type="text" id="dateInput" placeholder="mm/dd/yyyy..." required>
+				<input type="radio" name="urgency" value="Urgent"> Urgent
+				<input type="radio" name="urgency" value="Not Urgent" checked> Not Urgent
+				<div style="text-align:center; padding-top:10px;">
+					<span class="addBtn" onclick="getList()">Submit</span>
+					<span class="addBtn" onclick="closeModal()">Cancel</span>
+				</div>
+			</div>
+		</div>
+		<!-- Modal to edit item -->
+		<!-- My sleep deprived mind could only create this -->
+		<div class="modal" id="id02">
+			<div class="container modal-content">
+				<input type="text" id="nameInput2" placeholder="Title..." required>
+				<input type="text" id="descriptionInput2" placeholder="Description..." required>
+				<input type="text" id="categoryInput2" placeholder="Category..." required>
+				<input type="text" id="dateInput2" placeholder="mm/dd/yyyy..." required>
+				<input type="radio" name="urgency2" value="Urgent"> Urgent
+				<input type="radio" name="urgency2" value="Not Urgent" checked> Not Urgent
+				<div style="text-align:center; padding-top:10px;">
+					<span class="addBtn" onclick="editItem2()">Submit</span>
+					<span class="addBtn" onclick="closeModal2()">Cancel</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Div to contain the list items -->
+		<div id="shoppinglist"></div>
+	</body>
+</html>

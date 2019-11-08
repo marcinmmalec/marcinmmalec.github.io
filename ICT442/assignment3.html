@@ -1,0 +1,59 @@
+<!--
+-- ICT 442 Assignment 3: Sum the Values of 3 Numeric Input Fields
+-- Student: Marcin Mariusz Malec
+-- Application will add three numbers that the user provides via three text fields
+-- The addition function also performs data validation where 
+-- If the input is NaN, an error is outputed
+-- Note: Blank = 0
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ICT 442 Assessment 3: Sum Numeric Input Fields</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="ICT 442 Assignment 3">
+        <meta name="author" content="Marcin M. Malec"> 
+    </head>
+    
+    <body>
+        <!-- First input field -->
+        <input id="x" name="xnum" type="text">
+        <span>+</span>
+        <!-- Second input field -->
+        <input id="y" name="ynum" type="text">
+        <span>+</span>
+        <!-- Third input field -->
+        <input id="z" name="znum" type="text">
+        <!-- Submit Button -->
+        <button id="sum" type="button" onclick="add()">Submit</button>
+        <!-- Field that displays the result of x+y+z -->
+        <div id="result"></div>
+    </body>
+
+    <script type="text/javascript">
+        /* Function that validates and adds up x, y, and z */
+        function add() {
+            /* Value of the first input field */
+            var x = Number(document.getElementById('x').value);
+            /* Value of the second input field */
+            var y = Number(document.getElementById('y').value);
+            /* Value of the third input field */
+            var z = Number(document.getElementById('z').value);
+            /* The value of x+y+z */
+            var result;
+            /* If any of the values are NaNs */
+            /* Then output an error */
+            if (isNaN(x) || isNaN(y) || isNaN(z)){
+                num = "Input not valid";
+                document.getElementById('result').innerHTML = result;
+            }
+            /* Otherwise, output the result */
+            else{
+                result = x+y+z;
+                /* Display the result to the screen */
+                document.getElementById('result').innerHTML = result;
+                /* Also display the result to an alert box */
+                alert(x + " + " + y + " + " + z + " = " + result);
+            }
+        }
+    </script>

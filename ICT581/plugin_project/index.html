@@ -1,0 +1,87 @@
+<!----------------------------------------------------------------------------------------------- 
+-- Assignment 3: Create your first mobile-fit website
+-- Student: Marcin M. Malec
+-- ICT 581 014
+-- 
+-- Employing elements of jQuery UI and jQuery Mobile build a mobile to do list
+-- At this time the program will:
+-- 1.) Display a list
+-- 2.) Add list items
+-- 3.) Delete list items
+-- 4.) Edit list items
+--
+-- 2.) is achieved via text input form field at the top of the list
+-- 3.) is achieved by clicking on the red box associated to the list item
+-- 4.) is achieved by clicking on the list item and using a form popup to edit the item
+--
+-- To develop this project I've used another program as a base and another as inspiration
+-- Base: "Plain JavaScript To-Do List with LocalStorage" by Raghav Joshi hosted on codepen.io
+-- https://codepen.io/ragzor/pen/xGrJrg?editors=1010
+-- Inspiration: "How TO - Create a To Do List" by w3schools.com
+-- https://www.w3schools.com/howto/howto_js_todolist.asp
+------------------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html>
+    <!-- Head Element -->
+    <head>
+        <meta name="viewport" content="width=device-width",initial-scale=1>
+        <title>To Do Program</title>
+        <!-- Link to jQuery Mobile CSS -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <!-- Link to jQuery UI CSS -->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+        <!-- My Style Sheet -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!-- Body Element -->
+    <body>
+        <!-- Error Dialog Box -->
+        <!-- This dialog box triggers if the "Add New" is empty -->
+        <div id="dialogError" title="Input Error">
+            You must write something!
+        </div>
+        <!-- This dialog box triggers when the users attempts to edit an item -->
+        <div id="editModal" title="Edit">
+            <form id="editItemForm" action='#'>
+                <p>Enter what you would like to rename the item to.
+                    <br>Enter nothing to keep the orginal name.</p>
+                <input type="text" name="editItem" id="editItem"/>
+            </form>
+        </div>
+        <!-- Mobile Page -->
+        <div data-role="page">
+            <!-- Header -->
+            <div data-role="header">
+                <h1>To Do List</h1>
+            </div>
+            <!-- Body/Content -->
+            <div data-role="content">
+                <!--<div class="container">-->
+                    <!-- Input Field -->
+                    <form id="newItemForm" action="#">
+                        <input type="text" name="item" id="item" placeholder="Add New"/>
+                    </form>
+                    <!-- List Element -->
+                    <ul id="list">
+                    
+                    </ul>
+                    <!-- Decided to place a button that calls printScreen function -->
+                    <button type="button" onclick="printScreen()">Print</button>
+                <!--</div>-->
+            </div>
+            <!-- Footer -->
+            <!-- I'll probably put the print button here -->
+            <div data-role="footer">
+                <h1>To Do List</h1>
+            </div>
+        </div>
+        <!-- jQuery 2.1.0 -->      
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <!-- jQuery Mobile 1.4.5 -->
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <!-- jQuery UI 1.12.1 -->
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <!-- My Script File -->
+        <script src="script.js"></script>
+    </body>
+</html>

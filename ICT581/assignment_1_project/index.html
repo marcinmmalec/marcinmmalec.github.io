@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Assignment 1</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="jquery-3.4.0.min.js"></script>
+
+	<meta charset="UTF-8">
+  </head>
+    
+  <body>
+
+    <header>
+      <nav>
+        <h1>Header</h1>
+      </nav>
+    </header>
+	 
+		<!-- List of buttons -->
+	<div id="button_wrapper">
+		<button id="add_new_box">Add a new box</button>
+		<button id="remove_box">Remove a box</button>
+		<button id="add_yellow_box">Add yellow box</button>
+		<button id="change_page_layout">Change page layout</button>
+		<button id="print_DOM_tree">Print DOM tree</button>
+	</div>	
+
+	
+	<ul class="grid-container">
+		<li class="grid-item">1</li>
+		<li class="grid-item">2</li>
+		<li class="grid-item">3</li>
+		<li class="grid-item">4</li>
+		<li class="grid-item">5</li>
+		<li class="grid-item">6</li>
+	</ul>
+    
+    
+		<footer>
+      <h4>Footer</h4> 
+    </footer>
+	
+	<script>
+
+		$(document).ready(function(){
+			// Variable for the box element
+			var box;
+			// Varibale for the grid container
+			var grid;
+			// Get the grid container element
+			grid = document.getElementsByClassName('grid-container')[0];
+			// Toggle variable for the layout
+			// 0: Normal
+			// 1: Lines
+			var layoutToggle = 0;
+			// Toggle variable for printing the DOM tree
+			// 0: Normal
+			// 1: Print Tree
+			var toggleDOMTREE = 0;
+			// Get all current grid items
+			var a = document.getElementsByClassName('grid-item');
+			// Variable for the box id
+			// Set variable to be the length of the grid-item array
+			var boxNum = a.length;
+			// Original HTML
+			var originalHTML;
+			// Give each box its own id
+			for (var i = 0; i <= a.length-1; i++) {
+				a[i].id = i+1;
+			}
+    // type your script here
+		// here how to create a function and link it to a button
+		// 1. Add new box:
+			$('#add_new_box').click(function(){
+				// If there are less than 10 boxes
+				if (boxNum < 10){
+					// Increment box ID value
+					boxNum++;
+					// Create List Item
+					box = document.createElement('li');
+					// Print Box's ID number to the box
+					box.innerHTML = boxNum;
+					// Apply grid-item class to the box
+					box.classList.add('grid-item');
+					// Apply box ID
+					box.id = boxNum;
+					// If layout is set to "Line"
+					if(layoutToggle==1){
+						// Apply widths to fit in container
+						$(box).css('max-width', '960px');
+						$(box).css('width', 'inherit');
+					}
+					// Actually add the box
+					grid.appendChild(box);
+					// If there are now two boxes,
+					if (boxNum == 2){
+						// Then reveal the remove box button
+						$('#remove_box').show();
+					}
+					// If there are now ten boxes,
+					if (boxNum == 10){
+						// Hide the two add box buttons
+						$('#add_new_box').hide();
+						$('#add_yellow_box').hide();
+					}
+				}
+				// Else,
+				else {
+					// Alert user of an error
+					alert("ERROR in adding new boxes");
+				}
+			}); // end add new box function		
+		// 2. Remove a box
+			$('#remove_box').click(function(){
+				// This is a cheat to get the DOM Tree button to work
+				// Essentially get the current grid contents
+				// Remove the current contents
+				// Then reapply them
+				// This method removes empty <li> tags from the DOM Tree print
+				grid = document.getElementsByClassName('grid-container')[0];
+				originalHTML = grid.innerHTML;
+				$(grid).empty();
+				$(originalHTML).appendTo(grid);
+				// If greater than 0 boxes
+				if (boxNum > 0){
+					// Get the box with the highest ID
+					box = document.getElementById(boxNum);
+					//box.parentNode.removeChild(box);
+					// Get rid of the box
+					box.remove();
+					// Decrement the highest ID
+					boxNum--;
+					// If there is only one box
+					if (boxNum == 1){
+						// Hide the button
+						$('#remove_box').hide();
+					}
+					// If the add new button is hideen
+					if (!($('add_new_box').is(':visible'))){
+						// Unhide the add new buttons
+						$('#add_new_box').show();
+						$('#add_yellow_box').show();
+					}
+				}
+			}); // end remove a box function
+		// 3. Add a box with a yellow background
+			$('#add_yellow_box').click(function(){
+				// If there are less than 10 boxes
+				if (boxNum < 10){
+					// Then perform the same actions as add_new_box
+					// I don't know how to just call the add_new_box action
+					boxNum++;
+					box = document.createElement('li');
+					box.innerHTML = boxNum;
+					box.classList.add('grid-item');
+					box.id = boxNum;
+					if(layoutToggle==1){
+						$(box).css('max-width', '960px');
+						$(box).css('width', 'inherit');
+					}
+					// The only unique portion where we make the box yellow
+					$(box).css('background', 'yellow');
+					grid.appendChild(box);
+					if (boxNum == 2){
+						$('#remove_box').show();
+					}
+					if (boxNum == 10){
+						$('#add_new_box').hide();
+						$('#add_yellow_box').hide();
+					}
+				}
+			}); // end add yellow box function
+		// 4. Order boxes into rows
+			$('#change_page_layout').click(function(){
+				// If the layout is "normal"
+				if (layoutToggle==0){
+					// Change the container to display block
+					$(grid).css('display', 'block');
+					// Remove the left padding (40px)
+					$(grid).css('padding-left', '0');
+					a = document.getElementsByClassName('grid-item');
+					// For each box, change the width so that the box fits the width
+					for (var i = 0; i <= a.length-1; i++) {
+						$(a[i]).css('max-width', '960px');
+						$(a[i]).css('width', 'inherit');
+					}
+					// Update toggle to "line"
+					layoutToggle = 1;
+				}
+				// IF the layout is "line"
+				else if (layoutToggle==1){
+					// Essentailly, undo everything in the first if
+					$(grid).css('display', 'grid');
+					$(grid).css('padding-left', '');
+					a = document.getElementsByClassName('grid-item');
+					for (var i = 0; i <= a.length-1; i++) {
+						$(a[i]).css('max-width', '');
+						$(a[i]).css('width', '');
+					}
+					// Update toggle to "normal"
+					layoutToggle = 0;
+				}
+			}); // end the order boxes into rows function
+		// 5. Print a DOM tree
+			$('#print_DOM_tree').click(function(){
+				// My goodness this code is horrible
+				// This code assumes that we will only deal with (<ul>...</ul>). Not error tolerant
+				// If the toggle is off (ie no tree is printed)
+				if (toggleDOMTREE == 0){
+					// Get the current grid layout
+					grid = document.getElementsByClassName('grid-container')[0];
+					// Store the current grid for later
+					originalHTML = grid.innerHTML;
+					// Remove the grid
+					$(grid).empty();
+					// Reapply the grid
+					// This method is a hack to remove empty <li> tags that keep appearing in the tree
+					$(originalHTML).appendTo(grid);
+					// Get the HTML
+					var htmlString = grid.outerHTML;
+					// Convert the HTML in a text node
+					var someString = document.createTextNode(htmlString);
+					// Replace the instances of tags being next to each other (ex. </li><li>) to have a comma in between (i.e <li>,<li>)
+					htmlString = htmlString.replace(/></gi, '>,<');
+					// Break the text node into an array removing newlines and commas
+					htmlString = htmlString.split(/\n|,/);
+					// Remove the grid-container class so the tree wouldn't sit in a grid box
+					$(grid).removeClass('grid-container');
+					// Remove the grid
+					$(grid).empty();
+					// Apply the first level
+					htmlString[0] = '- ' + htmlString[0];
+					someString = document.createTextNode(htmlString[0]);
+					// Since we are keeping the parent list we will wrap the text nodes in list items
+					$(someString).wrap('<li></li>');
+					// Append the text
+					$(someString).parent().appendTo(grid);
+					// For each li tags
+					for (var i = 1; i < htmlString.length-1; i++){
+						// Apply child levels
+						htmlString[i] = '-- ' + htmlString[i];
+						// Do the same thing as the parent
+						someString = document.createTextNode(htmlString[i]);
+						$(someString).wrap('<li></li>');
+						$(someString).parent().appendTo(grid);
+					}
+					// Get the closing tag of the parent
+					htmlString[htmlString.length-1] = '- ' + htmlString[htmlString.length-1];
+					someString = document.createTextNode(htmlString[htmlString.length-1]);
+					$(someString).wrap('<li></li>');
+					$(someString).parent().appendTo(grid);
+					// Update toggle
+					toggleDOMTREE = 1;
+					// Hide all the other buttons to avoid altering the DOM until the button is pressed again
+					$('#add_new_box').hide();
+					$('#remove_box').hide();
+					$('#add_yellow_box').hide();
+					$('#change_page_layout').hide();
+					alert('DOM Tree will be printed. Other buttons will be hidden until button pressed again.');
+				}
+				// If the DOM Tree is printed
+				else if (toggleDOMTREE == 1){
+					// Clear the grid
+					$(grid).empty();
+					// Reapply the grid-container class
+					$(grid).addClass('grid-container');
+					// Bring back the original grid
+					$(originalHTML).appendTo(grid);
+					// Update toggle
+					toggleDOMTREE = 0;
+					// Reveal the buttons
+					$('#add_new_box').show();
+					$('#remove_box').show();
+					$('#add_yellow_box').show();
+					$('#change_page_layout').show();
+				}
+				
+			}); // end of print a DOM tree function
+		}); // end of ready function	
+	</script>
+  </body>
+</html>
+<!-- End of Document -->
+
+
+
+
+
+
+
+
+
+
+
+

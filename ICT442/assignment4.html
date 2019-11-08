@@ -1,0 +1,112 @@
+<!--
+-- ICT 442 Assignment 4: Creative Project
+-- Student: Marcin Mariusz Malec
+-- Simple form with validator
+-- Uses jQuery for validation
+-- Three Form fieds are used: Radio, Text Field, and Number Field
+-- NOTE: I have observed that, rarely, the javascript doesn't load properly and a default validator takes over
+-->
+<!DOCTYPE html>
+<html>
+    <!-- Meta Section -->
+    <head>
+        <title>ICT 442 Assessment 4: Creative Project</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="ICT 442 Assignment 4">
+        <meta name="author" content="Marcin M. Malec"> 
+        <!-- Importing jQuery libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
+    </head>
+    <!-- In-Document CSS -->
+    <style>
+        /* Style for error message */
+        .error{
+            color:red
+        }
+    </style>
+    <!-- Body Section -->
+    <body>
+        <form id="my_form" action="">
+            <fieldset>
+                <!-- The container class was originally used for something else -->
+                <!-- But kept just in case -->
+                <!-- Radio Button field -->
+                <p class="container">
+                    <label class="form_label" for="radio_input">Radio (required)</label>
+                    <br>
+                    <input type="radio" name="radio_input" value="Radio1" required>
+                    Radio 1<br>
+                    <input type="radio" name="radio_input" value="Radio2">
+                    Radio 2<br>
+                    <input type="radio" name="radio_input" value="Radio3">
+                    Radio 3<br>
+                </p>
+                <!-- Generic Text Field -->
+                <p class="container">
+                    <label class="form_label" for="text_input">Text Field (required)</label>
+                    <br>
+                    <input type="text" name="text_input" required><br>
+                </p>
+                <!-- Text field with number requirement -->
+                <p class="container">
+                    <label class="form_label" for="num_input">Enter a number (required)</label>
+                    <br>
+                    <input type="text" name="num_input" required><br>
+                </p>
+                <!-- Submit Button -->
+                <input type="submit" name="submit" value="Submit">
+            </fieldset>
+        </form>
+    </body> <!-- End Content Section -->
+    <!-- Script Section -->
+    <script type="text/javascript">
+        /* What happens when submit succeeds */
+        /* There are other better ways to do this */
+        $.validator.setDefaults({
+            submitHandler: function() {
+                alert("submitted!");
+                reset();
+            }
+        });
+        /* Validator section */
+        $(function () {
+            $("#my_form").validate({
+                /* Rules field */
+                rules: {
+                    /* Apparently there are multiple version of how this field can be set */
+                    /* Set the following fields as required */
+                    radio_input: "required",
+                    text_field: "required",
+                    num_input: "required",
+                    /* Set the number requirement */
+                    num_input: "number"
+                },
+                /* Set error messages */
+                messages: {
+                    radio_input: " Please select a radio button",
+                    text_input: " Please enter anything",
+                    num_input: {
+                        /* Error message for when field is empty */
+                        required: " This field is required",
+                        /* Error message for when NaN */
+                        number: " Please enter a number"
+                    }
+                },
+                /* Design error placement */
+                errorPlacement: function(error, element){
+                    if(element.is(":radio")){
+                        error.appendTo(element.siblings('.form_label'));
+                    }
+                    else if (element.is(":text")){
+                        error.appendTo(element.siblings('.form_label'));
+                    }
+                    /* Don't know what this is for, I just know that its part of the jQuery Demos */
+                    else{
+                        error.insertAfter(element);
+                    }
+                }
+            });
+        });
+    </script><!-- End Script Tag -->
+</html><!-- End of Document -->
