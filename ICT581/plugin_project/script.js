@@ -117,7 +117,7 @@ function printScreen() {
     for (var i = 0; i<list.length; i++){
         print_window.document.write('<p style="font-size:14px; color:black; margin: 0 0 0 20px;"><b>' + list[i].textContent.slice(0,-1) + '</b></p>');
     }
-    print_window.document.close();
+    //print_window.document.close();
     //print_window.document.focus();
     /* Display print screen */
     print_window.print();
