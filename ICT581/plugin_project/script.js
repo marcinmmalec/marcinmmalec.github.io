@@ -120,5 +120,5 @@ function printScreen() {
     /* Display print screen */
     print_window.print();
     /* Close the window */
-    print_window.close();
+    //print_window.close();
 }
