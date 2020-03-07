@@ -89,7 +89,14 @@ nav li a:hover{
     background-color: #555;
     color: white;
 }
-
+/* Style for when user is at that page */
+.activeTab {
+    background-color: #555; 
+    color: white; 
+    font-style:italic; 
+    padding: 8px 16px; 
+    cursor: default;
+}
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .column {
