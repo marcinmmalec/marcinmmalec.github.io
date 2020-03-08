@@ -141,6 +141,10 @@ a.activeTab {
 #ict580{
     margin-top: -1px;
 }
+
+.indentText {
+    text-indent: 50px;
+}
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .column {
@@ -156,7 +160,15 @@ a.activeTab {
 }
 
 @media screen and (max-width: 900px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
     h2 {
-        font-size: 25px;
+        font-size: 1em;
+    }
+    
+    nav {
+        font-size: 1em;
     }
 }
