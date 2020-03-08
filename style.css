@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #f1f1f1;
+  background-color: white;
   padding: 20px;
   font-family: Arial;
 }
@@ -15,8 +15,17 @@ body {
 
 /* Center website */
 .main {
-  max-width: 1000px;
-  margin: auto;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #f1f1f1; 
+    padding: 0 1em 1em 1em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.clearfix {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 h1 {
@@ -85,7 +94,7 @@ nav li a{
     padding: 8px 16px;
 }
 /* Add style for when the user hovers over a nav button */
-nav li a:hover{
+nav li a:hover, .dropdown:hover .dropbtn{
     background-color: #555;
     color: white;
 }
@@ -96,6 +105,41 @@ nav li a:hover{
     font-style:italic; 
     padding: 8px 16px; 
     cursor: default;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    margin-top: 8px;
+    width: 100%;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+a.activeTab {
+    color: white;
+}
+
+#ict580{
+    margin-top: -1px;
 }
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
