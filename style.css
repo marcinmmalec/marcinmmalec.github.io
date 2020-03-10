@@ -98,6 +98,15 @@ nav li a:hover, .dropdown:hover .dropbtn{
     background-color: #555;
     color: white;
 }
+
+#mobile_nav_bar {
+    padding: 0;
+}
+
+#mobile_nav_bar nav li {
+    display: block;
+}
+
 /* Style for when user is at that page */
 .activeTab {
     background-color: #555; 

@@ -9,14 +9,17 @@
         <!-- Add Author -->
         <meta name="author" content="Marcin M. Malec">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="main">
             <h1>ICT 580: HTML5 and CSS3</h1>
+            <!-- Normal Nav Bar -->
             <fieldset id="nav_bar">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Resume</a></li>
+                        <li><a href="resume.html">Resume</a></li>
                         <li class="dropbtn dropdown">
                             <a class="dropbtn"  href="courseList.html">Certification Course List</a>
                             <div class="dropdown-content">
@@ -26,6 +29,19 @@
                                 <a href="ict443.html">ICT 443</a>
                             </div>
                         </li>
+                    </ul>
+                </nav>
+            </fieldset>
+            <!-- Mobile Nav Bar -->
+            <fieldset id="mobile_nav_bar" style="display:none;">
+                <nav>
+                    <ul>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="courseList.html">Certification Course List</a></li>
+                        <li class="activeTab">ICT 580</li>
+                        <li><a href="ict442.html">ICT 442</a></li>
+                        <li><a href="ict581.html">ICT 581</a></li>
+                        <li><a href="ict443.html">ICT 443</a></li>
                     </ul>
                 </nav>
             </fieldset>
@@ -54,4 +70,5 @@
         <!-- END MAIN -->
         </div>
     </body>
+    <script type="text/javascript" src="script.js"></script>
 </html>

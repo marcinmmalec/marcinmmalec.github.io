@@ -9,23 +9,39 @@
         <!-- Add Author -->
         <meta name="author" content="Marcin M. Malec">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="main">
             <h1>Marcin Mariusz Malec</h1>
+            <!-- Normal Nav Bar -->
             <fieldset id="nav_bar">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Resume</a></li>
+                        <li><a id="resume" href="resume.html">Resume</a></li>
                         <li class="dropdown">
                             <a class="dropbtn activeTab">Certification Course List</a>
                             <div class="dropdown-content">
                                 <a id="ict580" href="ict580.html">ICT 580</a>
-                                <a href="ict442.html">ICT 442</a>
-                                <a href="ict581.html">ICT 581</a>
-                                <a href="ict443.html">ICT 443</a>
+                                <a id="ict442" href="ict442.html">ICT 442</a>
+                                <a id="ict581" href="ict581.html">ICT 581</a>
+                                <a id="ict443" href="ict443.html">ICT 443</a>
                             </div>
                         </li>
+                    </ul>
+                </nav>
+            </fieldset>
+            <!-- Mobile Nav Bar -->
+            <fieldset id="mobile_nav_bar" style="display:none;">
+                <nav>
+                    <ul>
+                        <li><a id="resume" href="resume.html">Resume</a></li>
+                        <li class="activeTab">Certification Course List</li>
+                        <li><a id="ict580" href="ict580.html">ICT 580</a></li>
+                        <li><a id="ict442" href="ict442.html">ICT 442</a></li>
+                        <li><a id="ict581" href="ict581.html">ICT 581</a></li>
+                        <li><a id="ict443" href="ict443.html">ICT 443</a></li>
                     </ul>
                 </nav>
             </fieldset>
@@ -78,4 +94,5 @@
         <!-- END MAIN -->
         </div>
     </body>
+    <script type="text/javascript" src="script.js"></script>
 </html>
