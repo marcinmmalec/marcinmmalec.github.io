@@ -1,11 +1,13 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: white;
-  padding: 20px;
-  font-family: Arial;
+    background-color: white;
+    padding: 0 20px 20px 20px;
+    margin: 0 auto;
+    font-family: Arial;
+    max-width: 1000px;
 }
 
 .column a{
@@ -13,13 +15,50 @@ body {
     text-decoration-line:none;
 }
 
-/* Center website */
-.main {
-    max-width: 1000px;
-    margin: auto;
-    background-color: #f1f1f1; 
-    padding: 0 1em 1em 1em;
+header {
+    background-color: #2867B2; 
+    display: flex; 
+    height: 80px; 
+    align-items: center; 
+    justify-content: center; 
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.header {
+    margin: 0; 
+    color: #FFFFFF;
+}
+
+/* Center website */
+main {
+    /* max-width: 1000px; */
+    /* margin: auto; */
+    background-color: #f1f1f1; 
+    padding: 1em 1em 1em 1em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+footer {
+    display: flex; 
+    height: 80px; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #2867B2; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+footer p {
+    margin: 0; 
+    color: #FFFFFF;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: aqua;
 }
 
 .clearfix {
@@ -169,6 +208,10 @@ a.activeTab {
 }
 
 @media screen and (max-width: 900px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    
     h1 {
         font-size: 1.5em;
     }

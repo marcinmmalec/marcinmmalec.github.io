@@ -14,5 +14,5 @@ function resizeNav () {
         document.getElementById("mobile_nav_bar").style.display = "none";
     }
 }
-// Run the function once on page load
+// Run the resize function once on page load
 resizeNav();
