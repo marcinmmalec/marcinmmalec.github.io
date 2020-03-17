@@ -203,6 +203,17 @@ a.activeTab {
 .indentText {
     text-indent: 50px;
 }
+
+#skillList{
+    columns: 2; 
+    -webkit-columns: 2; 
+    -mox-columns: 2;
+}
+
+#skillList li{
+    margin-bottom: 0.75em;
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .column {
@@ -232,5 +243,11 @@ a.activeTab {
     
     nav {
         font-size: 1em;
+    }
+    
+    #skillList {
+        columns: 1;
+        -webkit-columns: 1;
+        -mox-columns: 1;
     }
 }
