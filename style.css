@@ -175,7 +175,7 @@ nav li a:hover, .dropdown:hover .dropbtn{
     overflow:hidden;
     max-height: 0;
     /* Transition close for dropdown */
-    /* transition:transform 5s ease; */
+    /*transition: max-height 0.3s ease-out; */
     
 }
 
