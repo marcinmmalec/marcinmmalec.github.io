@@ -133,9 +133,6 @@ nav li a{
     padding: 8px 16px;
 }
 
-.dropbtn {
-    transition:background-color 0.25s linear;
-}
 /* Add style for when the user hovers over a nav button */
 nav li a:hover, .dropdown:hover .dropbtn{
     background-color: #555;
@@ -178,7 +175,7 @@ nav li a:hover, .dropdown:hover .dropbtn{
     overflow:hidden;
     max-height: 0;
     /* Transition close for dropdown */
-    transition: max-height 0.25s ease-out;
+    /* transition:transform 5s ease; */
     
 }
 
@@ -192,7 +189,7 @@ nav li a:hover, .dropdown:hover .dropbtn{
 .dropdown:hover .dropdown-content {
     /* Transition open for dropdown. Value is arbitrary */
     max-height: 1000px;
-    transition: max-height 0.25s ease-in;
+    transition: max-height 0.3s ease-in;
 }
 
 a.activeTab {
