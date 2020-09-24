@@ -2,7 +2,10 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="style2.css?v=1.0">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     
     <body>
@@ -10,16 +13,16 @@
         <header>
             <div id="navbar" class="sticky">
                 <a href="#home">Marcin M. Malec</a>
-                <div id="navE" stlye="">
+                <div id="navE">
                     <ul style="float: right;">
-                        <a href="#keySkills">Key Competences</a>
-                        <a href="#projects">Projects</a>
+                        <a href="#keySkillsAnchor">Key Competences</a>
+                        <a href="#projectsAnchor">Projects</a>
                     </ul>
                 </div>
             </div>
         </header>   
         
-        <main style="height: 100%;">
+        <main>
             <!-- Hero Image -->
             <div class="hero-image">
                 <div class="hero-text">
@@ -28,20 +31,23 @@
                 </div>
             </div>
             <!-- About Me -->
-            <div id="aboutMe" style="display: flex;">
-                <img style="flex:50%; align-self:center;" src="images/34274637_772482996291088_2536206393338232832_n.jpg">
-                <div style="flex: 50%;">
+            <div id="aboutMe">
+                <div id="aboutMeimgContainer">
+                    <img src="images/34274637_772482996291088_2536206393338232832_n.jpg">
+                </div>
+                <div style="flex: 66%;">
                     <h2>About Me</h2>
                     <p>Highly skilled and dedicated Website Developer with more than 1 year of expertise spanning front-end web development, software architecture, website design and marketing management. Proven track record in supporting with the design and development of company-wide websites—assessing client requirements and integrating best practices to enhance website ranking and augment end-user experience across desktop and mobile platforms. Adept at utilizing content management systems, plugins and programming languages. Proficient in utilizing MS Office Suite, G-Suite, Adobe Photoshop, Content Management Systems–WordPress, JavaScript, HTML5, CSS3, Java and C++.</p>
                 </div>
             </div>
             <!-- Key Skills -->
-            <div id="keySkills" style="background-color: pink;">
+            <div id="keySkills" class="header" style="background-color: pink;">
+                <a id="keySkillsAnchor"></a>
                 <h2>Key Compentences</h2>
                 <div id="keySkillsContent">
                     <img src="images/HTML5v3.png">
                     <img src="images/CSS3v3.png">
-                    <img src="images/JavaScriptV3.png">
+                    <img src="images/JavaScriptLogoV2.png">
                     <img src="images/jQueryV3.png">
                     <img src="images/mySQLV3.png">
                     <img src="images/phpV3.png">
@@ -52,6 +58,7 @@
             </div>
             <!-- Projects -->
             <div id="projects">
+                <a id="projectsAnchor"></a>
                 <h2>Projects</h2>
             </div>
         </main>
@@ -59,5 +66,7 @@
         <footer>
             <p>Calgary, AB, T3M 1G4 | (403) 470-3173 | <a href="mailto:martinmmalec@gmail.com">martinmmalec@gmail.com</a></p>
         </footer>
+        <script type="text/javascript" defer src="script2.js"></script>
     </body>
+    
 </html>
