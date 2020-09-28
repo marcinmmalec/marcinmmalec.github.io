@@ -49,6 +49,9 @@ main {
     color: #f2f2f2;
     padding: 14px;
     text-decoration: none;
+    height: 60px;
+    box-sizing: border-box;
+    line-height: 30px;
 }
 
 #navbar ul a {
@@ -60,7 +63,7 @@ main {
 }
 
 #navL {
-    color: pink;
+    
 }
 
 #navL img {
@@ -69,7 +72,11 @@ main {
 }
 
 #navL a {
-    margin-top: 0.5em;
+    margin-top: 0.3em;
+    font-family: Amiri;
+    font-style: italic;
+    font-size: 1.2em;
+    height: 100%;
 }
 
 .sticky {
@@ -121,6 +128,10 @@ h2 {
     flex-direction: row;
 }
 
+#aboutMe h2 {
+    padding: 0px;
+}
+
 #aboutMeimgContainer {
     flex: 33%;
     align-items: center;
@@ -135,6 +146,11 @@ h2 {
 }
 
 /* Skills Section */
+#keySkills {
+    background: rgb(38,22,31);
+    background: linear-gradient(180deg, rgba(38,22,31,1) 0%, rgba(163,0,82,1) 100%);
+}
+
 #keySkillsContent {
     display: flex;
     flex-wrap: wrap;
