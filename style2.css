@@ -1,4 +1,14 @@
+/****************************************************************************
+*
+* Main CSS file for Resume (September/October 2020 Edition)
+*
+*****************************************************************************/
+
+/****************************************************************************
+* START GENERAL STYLING
+*****************************************************************************/
 html {
+    /* Apply smooth scrolling when using on page link anchors - Also applies when linking externally */
     scroll-behavior: smooth;
 }
 
@@ -11,6 +21,25 @@ main {
     height: 100%;
 }
 
+h2 {
+    text-align: center;
+    padding-top: 20px;
+}
+/* Anchor tagging while factoring in sticky bar */
+:target {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility; hidde
+}
+
+/****************************************************************************
+* END GENERAL STYLING
+*****************************************************************************/
+
+/****************************************************************************
+* START HERO IMAGE STYLING
+*****************************************************************************/
 .hero-image {
     /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.w3schools.com/howto/photographer.jpg"); */
     height: 100vh;
@@ -30,18 +59,26 @@ main {
     transform: translate(-50%, -50%);
     color: white;
 }
+/****************************************************************************
+* END HERO IMAGE STYLING
+*****************************************************************************/
 
+/****************************************************************************
+* START HEADER NAVIGATION BAR STYLING
+*****************************************************************************/
 #navbar {
     overflow: hidden;
     background-color: #333;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 60px;
+    justify-content: space-between;
 }
 
 #navbar ul {
     padding-left: 0;
-    margin: 0.5em 0 0 0;
+    margin: 0;
 }
 
 #navbar a {
@@ -59,24 +96,29 @@ main {
 }
 
 #navL {
-    flex: 50%;
-}
-
-#navL {
-    
+    display: flex;
+    height: inherit;
 }
 
 #navL img {
     max-width: 60px;
-    float: left;
 }
 
 #navL a {
-    margin-top: 0.3em;
     font-family: Amiri;
     font-style: italic;
     font-size: 1.2em;
     height: 100%;
+}
+
+#navR {
+    height: inherit;
+    margin: 0;
+}
+
+#navR a:hover {
+    color: black;
+    background-color: coral;
 }
 
 .sticky {
@@ -89,63 +131,48 @@ main {
 .sticky + .hero-image {
     padding-top: 60px;
 }
+/****************************************************************************
+* END HEADER NAVIGATION BAR STYLING
+*****************************************************************************/
 
-/*h2::before {
-    display: block;
-    content: " ";
-    margin-top: -50px;
-    height: 50px;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.header::before {
-    display: block;
-    content: " ";
-    margin-top: -50px;
-    height: 50px;
-    visibility: hidden;
-    pointer-events: none;
-}*/
-
-:target {
-    display: block;
-    position: relative;
-    top: -50px;
-    visibility; hidden;
-}
-
-h2 {
-    text-align: center;
-    padding-top: 20px;
-}
-
-/* About Section */
+/****************************************************************************
+* START ABOUT ME STYLING
+*****************************************************************************/
 #aboutMe {
     display: flex;
-    padding-top: 20px;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#aboutMeimgContainer {
+    
+}
+
+#aboutMeimgContainer img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: max-content;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    display: block;
+    margin: auto;
 }
 
 #aboutMe h2 {
     padding: 0px;
 }
 
-#aboutMeimgContainer {
-    flex: 33%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+#aboutMe div {
+    max-width: 50vw;
 }
+/****************************************************************************
+* END ABOUT ME STYLING
+*****************************************************************************/
 
-#aboutMe img {
-    border-radius: 50%;
-    width: 99%;
-    max-width: max-content;
-}
-
-/* Skills Section */
+/****************************************************************************
+* START KEY SKILLS STYLING
+*****************************************************************************/
 #keySkills {
     background: rgb(38,22,31);
     background: linear-gradient(180deg, rgba(38,22,31,1) 0%, rgba(163,0,82,1) 100%);
@@ -164,7 +191,13 @@ h2 {
     max-width: 100%;
     height: auto;
 }
+/****************************************************************************
+* END KEY SKILLS STYLING
+*****************************************************************************/
 
+/****************************************************************************
+* START FOOTER STYLING
+*****************************************************************************/
 footer {
     display: flex; 
     min-height: 50px; 
@@ -187,3 +220,6 @@ footer a {
 footer a:hover {
     color: aqua;
 }
+/****************************************************************************
+* END FOOTER STYLING
+*****************************************************************************/
