@@ -7,6 +7,17 @@
 /****************************************************************************
 * START GENERAL STYLING
 *****************************************************************************/
+:root {
+    /* Champagne */
+    --white-text-color: #F9E9D0;
+    /* Black - Not exactly */
+    --black-text-color: #26161F;
+    /* Fuchsia */
+    --second-main-color: #A30052;
+    /* Tiger Lily */
+    --third-main-color: #DB8780;
+}
+
 html {
     /* Apply smooth scrolling when using on page link anchors - Also applies when linking externally */
     scroll-behavior: smooth;
@@ -57,7 +68,7 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--white-text-color);
 }
 /****************************************************************************
 * END HERO IMAGE STYLING
@@ -116,9 +127,14 @@ h2 {
     margin: 0;
 }
 
+#navR a {
+    transition: 0.5s;
+    float: left;
+}
+
 #navR a:hover {
     color: black;
-    background-color: coral;
+    background-color: #DB8780;
 }
 
 .sticky {
@@ -143,10 +159,12 @@ h2 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    background-color: var(--black-text-color);
+    color: var(--white-text-color);
 }
 
 #aboutMeimgContainer {
-    
+    display: flex;
 }
 
 #aboutMeimgContainer img {
@@ -176,6 +194,11 @@ h2 {
 #keySkills {
     background: rgb(38,22,31);
     background: linear-gradient(180deg, rgba(38,22,31,1) 0%, rgba(163,0,82,1) 100%);
+}
+
+#keySkills h2 {
+    color: white;
+    margin-top: 0;
 }
 
 #keySkillsContent {
