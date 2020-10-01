@@ -170,7 +170,7 @@ h2 {
 #aboutMeimgContainer img {
     border-radius: 50%;
     width: 100%;
-    max-width: max-content;
+    max-width: 250px;
     padding: 10px 0px;
     box-sizing: border-box;
     display: block;
