@@ -1,45 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <!----------------------------------------------------------------------  
+    - BEGIN HEAD SECTION
+    ------------------------------------------------------------------------>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="style2.css?v=1.0">
-        <link rel="icon" type="image/png" href="images/favicon.png">
+        <title>Marcin M. Malec Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Marcin M. Malec">
+        <!-- Styles Sheets -->
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="./css/style2.css">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <!-- Script Files -->
+        
     </head>
+    <!----------------------------------------------------------------------  
+    - END HEAD SECTION
+    ------------------------------------------------------------------------>
     
+    <!----------------------------------------------------------------------  
+    - BEGIN BODY SECTION
+    ------------------------------------------------------------------------>
     <body>
         <!-- Sticky Nav -->
         <header>
-            <div id="navbar" class="sticky">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky">
+                <a class="navbar-brand" href="#"><img style="width: 40px;" src="images/logo/HatchfulExport-All/logo_transparent_no_text.png">
+                Marcin M. Malec</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#aboutMeSection">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>    
+                    </ul>
+                </div>
+            </nav>
+            <!--<div id="navbar" class="sticky">
                 <div id="navL">
                     <img src="images/logo/HatchfulExport-All/logo_transparent_no_text.png">
                     <a href="">Marcin M. Malec</a>
                 </div>
                 <div id="navR">
+                    <a href="#aboutMeSection">About Me</a>
                     <a href="#keyCompetences">Key Competences</a>
                     <a href="#projectsAnchor">Projects</a>
                 </div>
-            </div>
+            </div>-->
         </header>   
         
         <main>
             <!-- Hero Image -->
-            <div class="hero-image">
-                <div class="hero-text">
+            <div class="hero-image container-fluid">
+                <div class="hero-text container">
                     <h1 style="font-size:4em;">Marcin Mariusz Malec</h1>
                     <p style="font-size:2em;">Full Stack Developer</p>
                 </div>
             </div>
+            <!-- End Hero Image -->
             <!-- About Me -->
-            <div id="aboutMe">
-                <div id="aboutMeimgContainer">
-                    <img src="images/Profile-1.jpg">
-                </div>
-                <div>
-                    <h2>About Me</h2>
-                    <p>Hello and welcome to my online portfolio! I'm a skilled, educated, and highly dedicated website developer with 1 year of experience. I have a proven track record in supporting with the design and development of company-wide websites—assessing client requirements and integrating best practices to enhance website ranking and augment end-user experience across desktop and mobile platforms. Adept at utilizing content management systems, plugins and programming languages. Proficient in utilizing MS Office Suite, G-Suite, Adobe Photoshop, Content Management Systems–WordPress, JavaScript, HTML5, CSS3, Java and C++.</p>
+            <div id="aboutMe" class="container-fluid">
+                <a style="width: 0px;" id="aboutMeSection"></a>
+                <h2 id="aboutMe1">About Me</h2>
+                <div class="row">    
+                    <div id="aboutMeimgContainer" class="col-sm-12 col-md-4">
+                        <img class="img-fluid" src="images/Profile-1.jpg">
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <h2 id="aboutMe2">About Me</h2>
+                        <p>Hello and welcome to my online portfolio! I'm a skilled, educated, and highly dedicated website developer with 1 year of experience. I have a proven track record in supporting with the design and development of company-wide websites—assessing client requirements and integrating best practices to enhance website ranking and augment end-user experience across desktop and mobile platforms. Adept at utilizing content management systems, plugins and programming languages. Proficient in utilizing MS Office Suite, G-Suite, Adobe Photoshop, Content Management Systems–WordPress, JavaScript, HTML5, CSS3, Java and C++.</p>
+                    </div>
                 </div>
             </div>
             <!-- Key Skills -->
@@ -68,7 +113,15 @@
         <footer>
             <p>Calgary, AB, T3M 1G4 | (403) 470-3173 | <a href="mailto:martinmmalec@gmail.com">martinmmalec@gmail.com</a></p>
         </footer>
-        <script type="text/javascript" defer src="script2.js"></script>
+        <!----------------------------------------------------------------------  
+        - BEGIN SCRIPTS SECTION
+        ------------------------------------------------------------------------>
+        <script type="text/javascript" src="./js/script2.js"></script>
+        <!----------------------------------------------------------------------  
+        - END SCRIPTS SECTION
+        ------------------------------------------------------------------------>
     </body>
-    
+    <!----------------------------------------------------------------------  
+    - END BODY SECTION
+    ------------------------------------------------------------------------>
 </html>
