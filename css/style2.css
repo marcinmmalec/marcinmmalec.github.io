@@ -79,7 +79,7 @@ h2 {
 /****************************************************************************
 * START HEADER NAVIGATION BAR STYLING
 *****************************************************************************/
-#navbar {
+/*#navbar {
     overflow: hidden;
     background-color: #333;
     display: flex;
@@ -87,9 +87,9 @@ h2 {
     flex-wrap: wrap;
     height: 60px;
     justify-content: space-between;
-}
+}*/
 
-#navbar ul {
+/*#navbar ul {
     padding-left: 0;
     margin: 0;
 }
@@ -137,6 +137,22 @@ h2 {
 #navR a:hover {
     color: black;
     background-color: #DB8780;
+}*/
+
+.navbar{
+    color: var(--white-text-color);
+}
+
+.navbar-brand {
+    color: inherit !important;
+}
+
+.navbar .nav-link {
+    color: inherit !important;
+}
+
+#collapsibleNavbar {
+    justify-content: flex-end;
 }
 
 .sticky {
@@ -260,5 +276,11 @@ footer a:hover {
     
     #aboutMe2 {
         display: block;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-nav {
+        align-items: center;
     }
 }
