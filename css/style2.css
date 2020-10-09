@@ -258,12 +258,47 @@ p {
     background: linear-gradient(180deg, #a20051 0%, #DB8780 100%);
 }
 
+.carousel-item {
+    
+}
+
 .card {
-    width: 60vw;
+    width: 50%;
+    margin: 10% auto;
+    background-color: var(--black-text-color);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 25px;
+}
+
+.card-img-top {
+    padding: 0.3em 0.3em 0em 0.3em;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .card-body {
     color: black;
+    padding: 1em 1em 1em 1em;
+}
+
+.card-title {
+    text-align: center;
+    color: var(--white-text-color);
+}
+
+.card-text {
+    text-align: justify;
+    color: var(--white-text-color);
+}
+
+#projectLink {
+    background-color: var(--second-main-color);
+    color: var(--white-text-color);
+}
+
+#sourceLink {
+    background-color: var(--third-main-color);
+    color: var(--white-text-color);
 }
 /****************************************************************************
 * END PROJECTS STYLING
