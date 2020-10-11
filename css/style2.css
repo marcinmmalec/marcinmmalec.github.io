@@ -154,11 +154,15 @@ p {
 }
 
 .navbar-brand {
-    color: inherit !important;
+    color: var(--white-text-color) !important;
 }
 
 .navbar .nav-link {
-    color: inherit !important;
+    color: var(--white-text-color) !important;
+}
+
+.navHover:hover {
+    color: var(--second-main-color) !important;
 }
 
 #collapsibleNavbar {
@@ -205,6 +209,10 @@ p {
     margin: auto;
 }
 
+#aboutMeText {
+    text-align: justify;
+}
+
 #aboutMe1 {
     flex: 100%;
 }
@@ -234,9 +242,13 @@ p {
 }
 
 #keySkillsContent {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;*/
+}
+
+.skillRow {
     justify-content: center;
 }
 
@@ -245,6 +257,15 @@ p {
     padding: 20px;
     max-width: 100%;
     height: auto;
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 /****************************************************************************
 * END KEY SKILLS STYLING
