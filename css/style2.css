@@ -267,6 +267,46 @@ p {
     transform: scale(1.2);
     cursor: pointer;
 }
+
+.skillsModal .modal-content {
+    background-color: var(--black-text-color);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background: rgb(219,135,128);
+    background: -moz-radial-gradient(circle, rgba(219,135,128,1) 0%, rgba(163,0,82,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(219,135,128,1) 0%, rgba(163,0,82,1) 100%);
+    background: radial-gradient(circle, rgba(219,135,128,1) 0%, rgba(163,0,82,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#db8780",endColorstr="#a30052",GradientType=1);
+    
+    text-align: justify;
+    border-radius: 25px;
+}
+
+.skillsModal .modal-header {
+    flex-direction: column;
+    align-items: center;
+}
+
+.skillsModal .modal-body i {
+    padding-right: 0.5em;
+}
+
+.sampleProjectsList {
+    display: flex;
+    padding-bottom: 0.3em;
+}
+
+.sampleProjectsList > i {
+    box-sizing: border-box;
+    width: 28px;
+}
+
+.skillsModal .modal-body a{
+    color: var(--white-text-color);
+}
+
+.skillsModal .modal-body a:hover{
+    color: var(--third-main-color);
+}
 /****************************************************************************
 * END KEY SKILLS STYLING
 *****************************************************************************/
@@ -367,5 +407,9 @@ footer a:hover {
 @media only screen and (max-width: 768px) {
     .navbar-nav {
         align-items: center;
+    }
+    
+    .card {
+        width: 80%;
     }
 }
