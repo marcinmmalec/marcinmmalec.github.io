@@ -9,8 +9,8 @@
         <title>Marcin M. Malec Portfolio</title>
         <meta charset="UTF-8">
         <meta name="author" content="Marcin M. Malec">
-        <!-- Styles Sheets -->
         
+        <!-- Script/Style Sheets -->        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -19,9 +19,7 @@
 
         
         <link rel="stylesheet" href="./css/style2.css">
-        <link rel="icon" type="image/png" href="images/favicon.png">
-        <!-- Script Files -->
-        
+        <link rel="icon" type="image/png" href="images/favicon.png">   
     </head>
     <!----------------------------------------------------------------------  
     - END HEAD SECTION
@@ -49,7 +47,10 @@
                       </li>
                       <li class="nav-item">
                         <a class="nav-link navHover" href="#projectsSection">Projects</a>
-                      </li>    
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link navHover" href="#contactSection">Contact</a>
+                      </li>
                     </ul>
                 </div>
             </nav>
@@ -96,21 +97,21 @@
                 <div id="keySkillsContent" class="container-fluid">
                     <div class="row skillRow">
                         <div class="row skillRow">
-                            <a onclick="updateModal('html5')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/472-html5-logo-big-3.png" alt="HTML5"></a>
+                            <a onclick="updateModal('html5')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/472-html5-logo-big-2.png" alt="HTML5"></a>
                             <a onclick="updateModal('css3')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/css3-logo-big-2.png" alt="CSS3"></a>
-                            <img class="img-fluid zoom" src="images/Javascript-shield-3.png" alt="JavaScript">
+                            <a onclick="updateModal('javaScript')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/Javascript-shield-3.png" alt="JavaScript"></a>
                         </div>
                         <div class="row skillRow">
-                            <img class="img-fluid zoom" src="images/jquerylogo2_white.png" alt="jQuery">
-                            <img class="img-fluid zoom" src="images/mySQL_Logo2.png" alt="mySQL">
+                            <a onclick="updateModal('jQuery')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/jquerylogo2_white.png" alt="jQuery"></a>
+                            <a onclick="updateModal('mySql')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/mySQL_Logo2.png" alt="mySQL"></a>
                         </div>
                         <div class="row skillRow">
-                            <img class="img-fluid zoom" src="images/php_Logo2.png" alt="php">
-                            <img class="img-fluid zoom" src="images/bootstrap_logo2.png" alt="Bootstrap">
-                            <img class="img-fluid zoom" src="images/wordpress-logo2_white.png" alt="wordpress">
+                            <a onclick="updateModal('php')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/php_Logo2.png" alt="php"></a>
+                            <a onclick="updateModal('bootstrap')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/bootstrap_logo2.png" alt="Bootstrap"></a>
+                            <a onclick="updateModal('wordpress')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/wordpress-logo2_white.png" alt="wordpress"></a>
                         </div>    
                         <div class="row skillRow">
-                            <img class="img-fluid zoom" src="images/UC-2.png" alt="University of Calgary Alumnus">
+                            <a onclick="updateModal('uofc')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/UC-2.png" alt="University of Calgary Alumnus"></a>
                         </div>
                     </div> 
                 </div>
@@ -169,14 +170,18 @@
             </div>
         </main>
         <!-- Contact/Footer -->
-        <footer>
-            <p>Calgary, AB, T3M 1G4 | (403) 470-3173 | <a href="mailto:martinmmalec@gmail.com">martinmmalec@gmail.com</a></p>
+        <footer class="bg-dark">
+            <a id="contactSection"></a>
+            <p>Calgary, AB, T3M 1G4</p>
+            <span class="footerSpacer">|</span>
+            <p>(403) 470-3173</p>
+            <span class="footerSpacer">|</span>
+            <p><a href="mailto:martinmmalec@gmail.com">martinmmalec@gmail.com</a></p>
         </footer>
         <!----------------------------------------------------------------------  
         - BEGIN MODALS SECTION
         ------------------------------------------------------------------------>
         <!-- Skills Modal -->
-        <!-- HTML 5 Modal -->
         <div class="modal fade skillsModal" id="skillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -187,13 +192,13 @@
                         <div>
                             <img id="skillsModalImg" src="">
                         </div>
-                        <h5 class="modal-title" id="exampleModalLongTitle">
+                        <h4 class="modal-title" id="exampleModalLongTitle">
                             
-                        </h5>
+                        </h4>
                     </div>
                     <div id="skillsModalBody" class="modal-body">
                         <p id="skillsModalDescription"></p>
-                        <h5 style="text-align:center; text-decoration:underline;">Sample Projects</h5>
+                        <h5 id="skillsModalProjectsHeader" style="text-align:center; text-decoration:underline;">Sample Projects</h5>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -210,6 +215,8 @@
         - BEGIN SCRIPTS SECTION
         ------------------------------------------------------------------------>
         <script type="text/javascript" src="./js/script2.js"></script>
+        <script type="text/javascript" src="./js/skillModal.js"></script>
+        <script type="text/javascript" src="./js/navBar.js"></script>
         <!----------------------------------------------------------------------  
         - END SCRIPTS SECTION
         ------------------------------------------------------------------------>
