@@ -17,7 +17,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/94952b762c.js" crossorigin="anonymous"></script>
 
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./css/style2.css">
         <link rel="icon" type="image/png" href="images/favicon.png">   
     </head>
@@ -34,8 +34,13 @@
             <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky">
                 <a class="navbar-brand" href="#"><img style="width: 40px;" src="images/logo/HatchfulExport-All/logo_transparent_no_text_v2_white.png">
                 Marcin M. Malec</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" onclick="changeIcon()">
+<!--                    <span class="navbar-toggler-icon"></span>-->
+                    <div id="navbarIcon" style="display:inline-block; cursor: pointer;">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
@@ -83,6 +88,12 @@
                 <div class="row">    
                     <div id="aboutMeimgContainer" class="col-sm-12 col-md-4">
                         <img class="img-fluid" src="images/Profile-1.jpg">
+                        <div id="socialMediaBar">
+                            <a href="https://www.linkedin.com/in/marcinmmalec/" class="fa fa-linkedin"></a>
+                            <a href="mailto:martinmmalec@gmail.com?subject=New Contact Reaching Out" class="fa fa-envelope"></a>
+                            <a href="https://github.com/marcinmmalec" class="fa fa-github"></a>
+                        </div>
+                        
                     </div>
                     <div class="col-sm-12 col-md-8">
                         <h2 id="aboutMe2">About Me</h2>
@@ -168,14 +179,15 @@
                     </a>
                 </div>
             </div>
-            <!-- Contact -->
-            <div id="contactFrameContainer" class="container-fluid">    
+            <!-- Contact Form -->
+            <div id="contactFrameContainer" class="container-fluid">
+                <a id="contactSection"></a>
+                <h2>Contact</h2>
                 <iframe id="contactFrame" src="https://innoxious-aptitude.000webhostapp.com/formpage.html" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0"></iframe>
             </div>
         </main>
         <!-- Contact/Footer -->
         <footer class="bg-dark">
-            <a id="contactSection"></a>
             <p>Calgary, AB, T3M 1G4</p>
             <span class="footerSpacer">|</span>
             <p>(403) 470-3173</p>

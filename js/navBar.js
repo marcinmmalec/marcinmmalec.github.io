@@ -4,12 +4,16 @@
 *
 ***********************************************************************************/
 
+function changeIcon() {
+    $('#navbarIcon').toggleClass('change');
+}
 /* Function that automaticly closes the collapsible navbar when a link is pressed */
 function closeBar() {
     const navbar = document.getElementById('collapsibleNavbar');
     if (navbar.classList.contains('show')) {
         /*navbar.classList.remove('show');*/
         $('.collapse').collapse('toggle');
+        changeIcon();
     }
 }
 /* Event listener that fires every time the screen resizes */
