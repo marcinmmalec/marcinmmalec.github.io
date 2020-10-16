@@ -4,15 +4,19 @@
 *
 ***********************************************************************************/
 
+/* Function that changes the navbar more button */
 function changeIcon() {
+    /* jQuery statement to get the navbar more button icon */
+    /* Toggle change class in the icon element */
     $('#navbarIcon').toggleClass('change');
 }
 /* Function that automaticly closes the collapsible navbar when a link is pressed */
 function closeBar() {
     const navbar = document.getElementById('collapsibleNavbar');
+    /* If navbar is open, trigger bootstrap collaspe toggle */
     if (navbar.classList.contains('show')) {
-        /*navbar.classList.remove('show');*/
         $('.collapse').collapse('toggle');
+        /* Change close icon back to normal */
         changeIcon();
     }
 }
@@ -28,6 +32,7 @@ function addResize() {
             a.setAttribute("onclick", 'closeBar()');
         });
     } else {
+        closeBar();
         x.forEach(a => {
             a.removeAttribute("onclick");
         });

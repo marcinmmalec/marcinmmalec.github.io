@@ -32,6 +32,7 @@ body, html {
 /*    font-family: 'Titillium Web', sans-serif;*/
 /*    font-family: "Heebo", sans-serif;*/
     color: var(--white-text-color);
+    overflow-x: hidden;
 }
 
 main {
@@ -271,7 +272,7 @@ p {
     border-radius: 50%;
     width: 100%;
     max-width: 250px;
-    padding: 10px 0px;
+    padding: 20px 0px 10px 0px;
     box-sizing: border-box;
     display: block;
     margin: auto;
@@ -318,6 +319,15 @@ p {
 
 .skillRow {
     justify-content: center;
+}
+
+#masterSkillRow {
+    flex-direction: column;
+}
+
+.skillRow > a {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #keySkillsContent img {
@@ -387,6 +397,10 @@ p {
     background: linear-gradient(180deg, #a20051 0%, #DB8780 100%);
 }
 
+#projects > h2 {
+    margin-bottom: -8%;
+}
+
 .carousel-item {
     
 }
@@ -423,11 +437,22 @@ p {
 #projectLink {
     background-color: var(--second-main-color);
     color: var(--white-text-color);
+    border-color: var(--second-main-color);
+}
+
+#projectLink:hover {
+    opacity: 0.9;
 }
 
 #sourceLink {
     background-color: var(--third-main-color);
     color: var(--white-text-color);
+    border-color: var(--third-main-color);
+    width: 104.64px;
+}
+
+#sourceLink:hover {
+    opacity: 0.9;
 }
 /****************************************************************************
 * END PROJECTS STYLING

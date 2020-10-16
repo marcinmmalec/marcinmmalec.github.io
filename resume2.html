@@ -89,15 +89,16 @@
                     <div id="aboutMeimgContainer" class="col-sm-12 col-md-4">
                         <img class="img-fluid" src="images/Profile-1.jpg">
                         <div id="socialMediaBar">
-                            <a href="https://www.linkedin.com/in/marcinmmalec/" class="fa fa-linkedin"></a>
+                            <a href="https://www.linkedin.com/in/marcinmmalec/" target="_blank" class="fa fa-linkedin"></a>
                             <a href="mailto:martinmmalec@gmail.com?subject=New Contact Reaching Out" class="fa fa-envelope"></a>
-                            <a href="https://github.com/marcinmmalec" class="fa fa-github"></a>
+                            <a href="https://github.com/marcinmmalec" target="_blank" class="fa fa-github"></a>
                         </div>
                         
                     </div>
                     <div class="col-sm-12 col-md-8">
                         <h2 id="aboutMe2">About Me</h2>
-                        <p id="aboutMeText">Hello and welcome to my online portfolio! I'm a skilled, educated, and highly dedicated website developer with 1 year of experience. I have a proven track record in supporting with the design and development of company-wide websites—assessing client requirements and integrating best practices to enhance website ranking and augment end-user experience across desktop and mobile platforms. Adept at utilizing content management systems, plugins and programming languages. Proficient in utilizing MS Office Suite, G-Suite, Adobe Photoshop, Content Management Systems–WordPress, JavaScript, HTML5, CSS3, Java and C++.</p>
+                        <p id="aboutMeText">Integer nunc lacus, dictum vitae rutrum non, malesuada quis elit. Cras ut risus at velit eleifend condimentum eu consectetur justo. Vestibulum convallis posuere ante sit amet egestas. Cras a dapibus elit, sit amet convallis odio. Suspendisse porta nulla id ex porttitor pulvinar. Suspendisse sollicitudin turpis id sagittis dignissim. Integer convallis hendrerit mauris at mollis. Fusce dapibus tincidunt tortor in porttitor. Sed eu luctus tellus. Mauris lobortis diam molestie nisi blandit tincidunt. Nunc justo turpis, ultricies viverra semper eu, fermentum quis ipsum. Praesent vitae mattis sem, sed tempor urna. Integer consequat eros laoreet, pellentesque ex et, vulputate ipsum.</p>
+                        <p id="aboutMeText">Quisque tempor ipsum iaculis dui iaculis, eget blandit tortor egestas. Sed in eleifend tellus, sit amet fringilla libero. Ut non tortor ex. Sed dictum metus id tempor volutpat. Cras tincidunt tellus ligula, at molestie magna congue et. Donec nec pulvinar dolor, eget consequat tellus. In ut fermentum velit. Fusce sagittis venenatis justo, et aliquam ipsum commodo quis. Curabitur dignissim est ac vestibulum fringilla. Duis consectetur feugiat mi in varius. Vestibulum faucibus libero pretium leo volutpat tristique. Suspendisse potenti. Fusce ac vestibulum velit. Maecenas porttitor est in dignissim varius. Maecenas bibendum mi tortor, ut tristique tortor auctor id.</p>
                     </div>
                 </div>
             </div>
@@ -106,22 +107,22 @@
                 <a id="keyCompetencesSection"></a>
                 <h2>Key Compentences</h2>
                 <div id="keySkillsContent" class="container-fluid">
-                    <div class="row skillRow">
-                        <div class="row skillRow">
+                    <div id="masterSkillRow" class="row skillRow">
+                        <div id="firstSkillRow" class="row skillRow">
                             <a onclick="updateModal('html5')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/472-html5-logo-big-2.png" alt="HTML5"></a>
                             <a onclick="updateModal('css3')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/css3-logo-big-2.png" alt="CSS3"></a>
                             <a onclick="updateModal('javaScript')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/Javascript-shield-3.png" alt="JavaScript"></a>
                         </div>
-                        <div class="row skillRow">
+                        <div id="secondSkillRow" class="row skillRow">
                             <a onclick="updateModal('jQuery')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/jquerylogo2_white.png" alt="jQuery"></a>
                             <a onclick="updateModal('mySql')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/mySQL_Logo2.png" alt="mySQL"></a>
                         </div>
-                        <div class="row skillRow">
+                        <div id="thirdSkillRow" class="row skillRow">
                             <a onclick="updateModal('php')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/php_Logo2.png" alt="php"></a>
                             <a onclick="updateModal('bootstrap')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/bootstrap_logo2.png" alt="Bootstrap"></a>
                             <a onclick="updateModal('wordpress')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/wordpress-logo2_white.png" alt="wordpress"></a>
                         </div>    
-                        <div class="row skillRow">
+                        <div id="fourthSkillRow" class="row skillRow">
                             <a onclick="updateModal('uofc')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/UC-2.png" alt="University of Calgary Alumnus"></a>
                         </div>
                     </div> 
@@ -232,6 +233,7 @@
         ------------------------------------------------------------------------>
         <script type="text/javascript" src="./js/script2.js"></script>
         <script type="text/javascript" src="./js/skillModal.js"></script>
+        <script type="text/javascript" src="./js/skillList.js"></script>
         <script type="text/javascript" src="./js/navBar.js"></script>
         <!----------------------------------------------------------------------  
         - END SCRIPTS SECTION
