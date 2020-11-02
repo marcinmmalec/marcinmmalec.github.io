@@ -1,0 +1,47 @@
+.filterDiv {
+    display: none;
+    margin: 2px;
+}
+
+.filtered {
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+.container {
+    margin-top: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Style the buttons */
+.btn.active {
+    background-color: white !important;
+    color: #666 !important;
+}
+
+.card {
+    width: 18rem;
+}
+
+#myInput {
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+#myBtnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#myBtnContainer button {
+    margin: 0 1rem;
+}
