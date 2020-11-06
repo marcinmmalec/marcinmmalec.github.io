@@ -287,6 +287,20 @@ const resourceList = {
         link: 'https://amp.dev/',
         categories: ['other']
     },
+    shapeUp: {
+        name: 'Shape Up: Stop Running in Circles and Ship Work that Matters',
+        image: '',
+        description: 'This book is a guide to how we do product development at Basecamp. It’s also a toolbox full of techniques that you can apply in your own way to your own process. Whether you’re a founder, CTO, product manager, designer, or developer, you’re probably here because of some common challenges that all software companies have to face.',
+        link: 'https://basecamp.com/shapeup/webbook',
+        categories: ['generalResources']
+    },
+    userStories: {
+        name: 'What are (good) user stories?',
+        image: '',
+        description: 'By definition a user story is a (software) requirement formulated in everyday language. It can represent a user’s need, serve as a planning item in agile software development, or simply be used as a basis for discussion. User stories are understandable for everyone and clearly express the customers’ benefit.',
+        link: 'https://blogs.itemis.com/en/what-are-good-user-stories',
+        categories: ['generalResources']
+    },
 }
 
 function filterSelection(c) {
