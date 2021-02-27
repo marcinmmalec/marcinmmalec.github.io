@@ -55,6 +55,9 @@
                       <li class="nav-item">
                         <a class="nav-link navHover" href="#projectsSection">Projects</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link navHover" href="#contactSection">Contact</a>
+                      </li>
                     </ul>
                 </div>
             </nav>
@@ -112,14 +115,22 @@
                             <a onclick="updateModal('html5')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/472-html5-logo-big-2.png" alt="HTML5"></a>
                             <a onclick="updateModal('css3')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/css3-logo-big-2.png" alt="CSS3"></a>
                             <a onclick="updateModal('javaScript')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/Javascript-shield-3.png" alt="JavaScript"></a>
+                            <a onclick="updateModal('react')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/ReactIcon.png" alt="react"></a>
+                        </div>
+                        <div id="" class="row skillRow">
+                            <a onclick="updateModal('nodeJS')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/Node.js_logo.png" alt="nodeJS"></a>
+                            <a onclick="updateModal('express')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/NodeJSExpressLogo.png" alt="nodeJSExpress"></a>
                         </div>
                         <div id="secondSkillRow" class="row skillRow">
-                            <a onclick="updateModal('jQuery')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/jquerylogo2_white.png" alt="jQuery"></a>
-                            <a onclick="updateModal('mySql')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/mySQL_Logo2.png" alt="mySQL"></a>
+                            <a onclick="updateModal('mongoDB')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/MongoDBLogo.png" alt="mongoDB"></a>
+                        </div>
+                        <div id="" class="row skillRow">
+                            <a onclick="updateModal('semanticUIReact')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/SemanticUIReactLogo.png" alt="semanticUIReactLogo"></a>
+                            <a onclick="updateModal('bootstrap')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/bootstrap_logo2.png" alt="Bootstrap"></a>
                         </div>
                         <div id="thirdSkillRow" class="row skillRow">
+                            <a onclick="updateModal('jQuery')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/jquerylogo2_white.png" alt="jQuery"></a>
                             <a onclick="updateModal('php')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/php_Logo2.png" alt="php"></a>
-                            <a onclick="updateModal('bootstrap')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/bootstrap_logo2.png" alt="Bootstrap"></a>
                             <a onclick="updateModal('wordpress')" data-toggle="modal" data-target="#skillModal"><img class="img-fluid zoom" src="images/wordpress-logo2_white.png" alt="wordpress"></a>
                         </div>    
                         <div id="fourthSkillRow" class="row skillRow">
@@ -136,22 +147,18 @@
                     <div class="carousel-inner row w-100 mx-auto">
                         <div class="carousel-item col-md-12 active">
                             <div class="card">
-                              <a href="ICT443/Assignment2/list.html" target="_blank"><img class="card-img-top" src="./images/DynamicToDoList.jpg" alt="Dynamic To Do List"></a>
+                              <a href="https://github.com/marcinmmalec/Rail-Way" target="_blank"><img class="card-img-top" src="./images/rail-way.png" alt="Rail-Way"></a>
                               <div class="card-body">
-                                  <h5 class="card-title">Dynamic To Do List</h5>
-                                  <p class="card-text">I built this document for my front-end web development program at the University of Calgary. The to-do list allows the creation of tasks via a form with DOM manipulation through JavaScript. The list ultilizes local storage for persistance, drag-and-drop as a means of re-ordering list items, and prototypal inheritance to create different task categories</p>
+                                  <h5 class="card-title">Rail-Way</h5>
+                                  <p class="card-text">I led this project as part of a four-person team for our EvolveU project 3. The country of Nigeria has recently been developing its rail and metro network. Unfortunately, train schedules are only available as PDF documents with no digital solution. Rail-Way attempts to resolve this issue by providing a dynamic rail schedule presented as either the next departing train for a route or a route's weekly schedule. Also, the application provides travelers with a basic trip planner.</p>
                                   <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
                                       <div>
-                                        <a href="ICT443/Assignment2/list.html" target="_blank" class="btn btn-primary">Go to Project</a>
-                                      </div>
-                                      <div>
-                                        <a href="ICT443/Assignment2.zip" class="btn btn-primary">Source</a>
+                                        <a href="https://github.com/marcinmmalec/Rail-Way" target="_blank" class="btn btn-primary projectLink">GitHub Repository</a>
                                       </div>
                                   </div>   
                               </div>
                             </div>
                         </div>
-                        
                         <div class="carousel-item col-md-12">
                             <div class="card">
                               <a href="ICT443/Assignment2/list.html" target="_blank"><img class="card-img-top" src="./images/DynamicToDoList.jpg" alt="Dynamic To Do List"></a>
@@ -160,10 +167,24 @@
                                   <p class="card-text">I built this document for my front-end web development program at the University of Calgary. The to-do list allows the creation of tasks via a form with DOM manipulation through JavaScript. The list ultilizes local storage for persistance, drag-and-drop as a means of re-ordering list items, and prototypal inheritance to create different task categories</p>
                                   <div style="display: flex; justify-content: space-around; flex-wrap: wrap; flex-direction: row;">
                                       <div>
-                                        <a href="ICT443/Assignment2/list.html" target="_blank" id="projectLink" class="btn btn-primary">Go to Project</a>
+                                        <a href="ICT443/Assignment2/list.html" target="_blank" class="btn btn-primary projectLink">Go to Project</a>
                                       </div>
                                       <div>
-                                        <a href="ICT443/Assignment%202.zip" id="sourceLink" class="btn btn-primary">Source</a>
+                                        <a href="ICT443/Assignment2.zip" class="btn btn-primary sourceLink">Source</a>
+                                      </div>
+                                  </div>   
+                              </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item col-md-12">
+                            <div class="card">
+                              <a href="https://github.com/marcinmmalec/" target="_blank"><img class="card-img-top" src="./images/underConstruction.jpg" alt="Rail-Way"></a>
+                              <div class="card-body">
+                                  <h5 class="card-title">Plenty More!</h5>
+                                  <p class="card-text">I have more projects I would like to show you, just need a bit of time to make them presentable. Until then, please take a look at my gitHub.</p>
+                                  <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                                      <div>
+                                        <a href="https://github.com/marcinmmalec/" target="_blank" class="btn btn-primary projectLink">GitHub Repository</a>
                                       </div>
                                   </div>   
                               </div>
@@ -181,11 +202,11 @@
                 </div>
             </div>
             <!-- Contact Form -->
-<!--            <div id="contactFrameContainer" class="container-fluid">
+            <div id="contactFrameContainer" class="container-fluid">
                 <a id="contactSection"></a>
                 <h2>Contact</h2>
-                <iframe id="contactFrame" src="https://innoxious-aptitude.000webhostapp.com/formpage.html" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-            </div>-->
+                <iframe id="contactFrame" src="http://form.123formbuilder.com/5676780/form" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+            </div>
         </main>
         <!-- Contact/Footer -->
         <footer class="bg-dark">
@@ -206,7 +227,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <div>
+                        <div style="max-width:100%; max-height:100%">
                             <img id="skillsModalImg" src="">
                         </div>
                         <h4 class="modal-title" id="exampleModalLongTitle">

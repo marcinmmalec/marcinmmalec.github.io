@@ -48,7 +48,7 @@ const skills = {
     css3: {
         name: 'CSS 3',
         image: 'images/css3-logo-big-2.png',
-        description: 'CSS Content.',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
         projects: {
             
         }
@@ -56,7 +56,7 @@ const skills = {
     javaScript: {
         name: 'JavaScript',
         image: 'images/Javascript-shield-3.png',
-        description: 'JavaScript Content.',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
         projects: {
             
         }
@@ -64,7 +64,7 @@ const skills = {
     jQuery: {
         name: 'jQuery',
         image: 'images/jquerylogo2_white.png',
-        description: 'jQuery Content.',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
         projects: {
             
         }
@@ -72,7 +72,7 @@ const skills = {
     mySql: {
         name: 'mySQL',
         image: 'images/mySQL_Logo2.png',
-        description: 'mySQL Content.',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
         projects: {
             
         }
@@ -80,7 +80,7 @@ const skills = {
     php: {
         name: 'php',
         image: 'images/php_Logo2.png',
-        description: 'php Content.',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
         projects: {
             
         }
@@ -88,7 +88,7 @@ const skills = {
     bootstrap: {
         name: 'Bootstrap',
         image: 'images/bootstrap_logo2.png',
-        description: 'Bootstrap Content.',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
         projects: {
             
         }
@@ -96,7 +96,7 @@ const skills = {
     wordpress: {
         name: 'Wordpress',
         image: 'images/wordpress-logo2_white.png',
-        description: 'Wordpress Content.',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
         projects: {
             
         }
@@ -104,11 +104,51 @@ const skills = {
     uofc: {
         name: 'University of Calgary',
         image: 'images/UC-2.png',
-        description: 'University Content.',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
         projects: {
             
         }
-    }
+    },
+    react: {
+        name: 'React',
+        image: 'images/ReactIcon.png',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
+        projects: {
+            
+        }
+    },
+    nodeJS: {
+        name: 'Node.js',
+        image: 'images/Node.js_logo.png',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
+        projects: {
+            
+        }
+    },
+    express: {
+        name: 'Express Node.js',
+        image: 'images/NodeJSExpressLogo.png',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
+        projects: {
+            
+        }
+    },
+    mongoDB: {
+        name: 'MongoDB',
+        image: 'images/MongoDBLogo.png',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
+        projects: {
+            
+        }
+    },
+    semanticUIReact: {
+        name: 'Semantic-UI React',
+        image: 'images/SemanticUIReactLogo.png',
+        description: 'More content to come! I am just getting my projects organized. Stay tuned for more.',
+        projects: {
+            
+        }
+    },
 }
 /*
 * Function that updates the skill modal

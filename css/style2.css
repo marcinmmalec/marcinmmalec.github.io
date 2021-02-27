@@ -1,6 +1,6 @@
 /****************************************************************************
 *
-* Main CSS file for Resume (September/October 2020 Edition)
+* Main CSS file for Resume (Version)
 *
 *****************************************************************************/
 
@@ -368,6 +368,10 @@ p {
     padding-right: 0.5em;
 }
 
+#skillsModalImg {
+    max-width: 100%;
+}
+
 .sampleProjectsList {
     display: flex;
     padding-bottom: 0.3em;
@@ -432,26 +436,27 @@ p {
 .card-text {
     text-align: justify;
     color: var(--white-text-color);
+    min-height: 230px;
 }
 
-#projectLink {
+.projectLink {
     background-color: var(--second-main-color);
     color: var(--white-text-color);
     border-color: var(--second-main-color);
 }
 
-#projectLink:hover {
+.projectLink:hover {
     opacity: 0.9;
 }
 
-#sourceLink {
+.sourceLink {
     background-color: var(--third-main-color);
     color: var(--white-text-color);
     border-color: var(--third-main-color);
     width: 104.64px;
 }
 
-#sourceLink:hover {
+.sourceLink:hover {
     opacity: 0.9;
 }
 /****************************************************************************
@@ -465,16 +470,11 @@ p {
     background: -webkit-linear-gradient(180deg, rgba(219,135,128,1) 0%, rgba(219,135,128,1) 100%);
     background: linear-gradient(180deg, rgba(219,135,128,1) 0%, rgba(219,135,128,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#db8780",endColorstr="#db8780",GradientType=1);
-    
 }
 
 #contactFrame  {
     width: 100%;
 }
-
-.freebirdFormviewerViewFooterEmbeddedBackground {
-}
-
 
 /****************************************************************************
 * START FOOTER STYLING
