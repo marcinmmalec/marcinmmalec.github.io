@@ -213,3 +213,15 @@ $('#skillModal').on('hidden.bs.modal', function () {
         div.remove();
     })
 });
+
+$('#skillModal').on("shown.bs.modal", function () {
+    /*document.body.style.top = `-${window.scrollY}px`;
+    document.body.style.position = 'fixed';*/
+    $('html').css('overflow', 'hidden');
+}).on("hidden.bs.modal", function () {
+    /*const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    document.body.style.top = '';*/
+    $('html').css('overflow', 'auto');
+});
